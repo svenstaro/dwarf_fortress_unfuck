@@ -1,3 +1,6 @@
+#include "curses.h"
+#include <cstdlib>
+
 static bool curses_initialized = false;
 
 static void endwin_void() {
@@ -299,6 +302,7 @@ extern "C" {
       handle = dlopen("libncursesw.so", RTLD_LAZY);
       if (handle) goto opened;
       puts("Didn't find any flavor of libncursesw, attempting libncurses");
+#include <time.h>
       sleep(5);
       handle = dlopen("libncurses.so.5", RTLD_LAZY);
       if (handle) goto opened;
