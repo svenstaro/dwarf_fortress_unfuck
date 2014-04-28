@@ -23,7 +23,7 @@ dev packages installed.
 To build the library:
 
 ```
-cd build
+mkdir build && cd build
 cmake ..
 make -j4
 ```
