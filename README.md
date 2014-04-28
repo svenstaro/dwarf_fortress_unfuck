@@ -11,7 +11,7 @@ the code a little bit.
 
 ## Build Dependencies
 
-To build the graphics libary you must have the required 32 bit libraries and
+To build the graphics library you must have the required 32 bit libraries and
 dev packages installed.
 
 * Fedora 20
@@ -28,5 +28,5 @@ cmake ..
 make -j4
 ```
 
-If the build completeted successfulyl the library file is in `build/libgraphics.so`
+If the build completed successfully the library file is in `build/libgraphics.so`
 
