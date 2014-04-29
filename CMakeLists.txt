@@ -1,38 +1,17 @@
 cmake_minimum_required(VERSION 2.8)
 project( graphics )
 
-include(TestCXXAcceptsFlag)
-if(NOT DISABLE_GXX0XCHECK)
-  # try to use compiler flag -std=c++11
-  check_cxx_accepts_flag("-std=c++11" CXX_FLAG_CXX11)
-endif(NOT DISABLE_GXX0XCHECK)
-if(NOT CXX_FLAG_CXX11)
-    message(FATAL_ERROR "Compiler must support c++11")
-endif()
-
 if( CMAKE_SIZEOF_VOID_P EQUAL 8 ) # 64 bit architecture detected
-    set(ARCH_64 True)
+    message( "Detected 64bit build arch.. setting 32bit build options")
+    SET_PROPERTY(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS 0)
+    set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32" )
+    set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32" )
+    set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -m32" )
+    set( CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -m32" )
+    set( CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -m32" )
 endif()
 
-add_definitions(-Dunix)
-add_definitions(-Dlinux)
-if( ARCH_64 )
-        message( "Detected 64bit build arch.. setting 32bit build options")
-        if( COMMAND SET_PROPERTY )
-            SET_PROPERTY(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS 0)
-        else()
-            message( "Command SET_PROPERTY not found. do you have cmake >= 2.6 ?" )
-        endif()
-
-        set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32" )
-        set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32" )
-        set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -m32" )
-        set( CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -m32" )
-        set( CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -m32" )
-
-endif()
-
-set( CMAKE_CXX_FLAGS "-std=c++11" )
+add_definitions(-Dunix -Dlinux -std=c++11 -m32)
 
 find_package(OpenGL REQUIRED)
 find_package(SDL REQUIRED)
@@ -47,17 +26,17 @@ find_package(Threads REQUIRED)
 find_package(X11 REQUIRED)
 find_package(Curses REQUIRED)
 
-# special case for X11 libs
+# special case for X11 libs that the FindX11 module doesn't require by default
 if(NOT X11_ICE_FOUND)
-   MESSAGE(FATAL_ERROR "\nThe X11 Inter-Client Exchange (ICE) Library could not be found.\nCannot continue. Please install libICE.\n")
-endif(NOT X11_ICE_FOUND)
+   message(FATAL_ERROR "\nThe X11 Inter-Client Exchange (ICE) Library could not be found.\nCannot continue. Please install libICE.\n")
+endif()
 
 if(NOT X11_SM_FOUND)
-  MESSAGE(FATAL_ERROR "\nThe X11 Session Management (SM) Library could not be found.\nCannot continue. Please install libSM.\n")
-endif(NOT X11_SM_FOUND)
+  message(FATAL_ERROR "\nThe X11 Session Management (SM) Library could not be found.\nCannot continue. Please install libSM.\n")
+endif()
 
 if(NOT X11_Xext_FOUND)
-    MESSAGE(FATAL_ERROR "\nThe X.Org X11 libXext runtime library could not be found.\nCannot continue. Please install libXext.\n")
+    message(FATAL_ERROR "\nThe X.Org X11 libXext runtime library could not be found.\nCannot continue. Please install libXext.\n")
 endif()
 
 SET(SOURCES
@@ -83,13 +62,6 @@ include_directories(
 )
 
 add_library( graphics SHARED ${SOURCES} )
-
-if( ARCH_64 )
-    set_target_properties( graphics PROPERTIES COMPILE_FLAGS "-std=c++11 -m32" LINK_FLAGS "-m32" )
-else()
-    set_target_properties( graphics PROPERTIES COMPILE_FLAGS "-std=c++11" LINK_FLAGS "" )
-endif()
-
 target_link_libraries( graphics
     ${OPENGL_LIBRARY}
     ${SDL_LIBRARY}
