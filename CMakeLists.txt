@@ -4,11 +4,6 @@ project( graphics )
 if( CMAKE_SIZEOF_VOID_P EQUAL 8 ) # 64 bit architecture detected
     message( "Detected 64bit build arch.. setting 32bit build options")
     SET_PROPERTY(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS 0)
-    set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32" )
-    set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32" )
-    set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -m32" )
-    set( CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -m32" )
-    set( CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -m32" )
 endif()
 
 add_definitions(-Dunix -Dlinux -std=c++11 -m32)
