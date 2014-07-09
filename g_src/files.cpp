@@ -376,6 +376,22 @@ file_compressorst::file_compressorst(char *new_in_buffer,long new_in_buffersize,
 	f.clear();
 }
 
+void file_compressorst::set_buffer_info(char *new_in_buffer,long new_in_buffersize,
+										 char *new_out_buffer,long new_out_buffersize)
+{
+	in_buffer=new_in_buffer;
+	in_buffersize=new_in_buffersize;
+	in_buffer_amount_loaded=0;
+	in_buffer_position=0;
+
+	out_buffer=new_out_buffer;
+	out_buffersize=new_out_buffersize;
+	out_buffer_amount_written=0;
+	
+	f.clear();
+}
+
+
 file_compressorst::file_compressorst()
 {
 	compressed=true;

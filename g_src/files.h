@@ -342,6 +342,8 @@ class file_compressorst
 			{
 			close_file();
 			}
+		void set_buffer_info(char *new_in_buffer,long new_in_buffersize,
+						 char *new_out_buffer,long new_out_buffersize);
 
 	private:
 		char write_file(void *write_var,long write_size);
