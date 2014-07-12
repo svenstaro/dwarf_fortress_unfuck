@@ -1,3 +1,7 @@
+#include "curses.h"
+#include <time.h>
+#include <cstdlib>
+
 static bool curses_initialized = false;
 
 static void endwin_void() {

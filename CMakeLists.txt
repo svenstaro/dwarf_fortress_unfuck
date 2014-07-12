@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 2.8)
-project( graphics )
+project(graphics)
 
-if( CMAKE_SIZEOF_VOID_P EQUAL 8 ) # 64 bit architecture detected
-    message( "Detected 64bit build arch. Setting 32bit build options.")
-    message( "This requires a multilib cross-compiler. Let's hope you have one.")
+if(CMAKE_SIZEOF_VOID_P EQUAL 8) # 64 bit architecture detected
+    message("Detected 64bit build arch. Setting 32bit build options.")
+    message("This requires a multilib cross-compiler. Let's hope you have one.")
     SET_PROPERTY(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS 0)
     add_definitions(-m32)
-    set( CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -m32" )
+    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -m32")
 endif()
 
 add_definitions(-Dunix -Dlinux -std=c++11)
@@ -59,8 +59,8 @@ include_directories(
     ${CURSES_INCLUDE_DIR}
 )
 
-add_library( graphics SHARED ${SOURCES} )
-target_link_libraries( graphics
+add_library(graphics SHARED ${SOURCES})
+target_link_libraries(graphics
     ${OPENGL_LIBRARY}
     ${SDL_LIBRARY}
     ${SDL_TTF_LIBRARIES}
