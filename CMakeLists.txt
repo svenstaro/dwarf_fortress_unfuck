@@ -22,6 +22,8 @@ find_package(OpenAL REQUIRED)
 find_package(Freetype REQUIRED)
 find_package(Threads REQUIRED)
 find_package(X11 REQUIRED)
+
+set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)
 
 # special case for X11 libs that the FindX11 module doesn't require by default
