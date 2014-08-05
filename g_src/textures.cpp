@@ -132,7 +132,7 @@ void textures::upload_textures() {
   }
   // Check whether the GPU will allow a texture of that size
   if (!testTextureSize(gl_catalog, catalog_width, catalog_height)) {
-    MessageBox(NULL,"GPU unable to accomodate texture catalog. Retry without graphical tiles, update your drivers, or better yet update your GPU.", "GL error", MB_OK);
+    MessageBox(NULL,"GPU unable to accommodate texture catalog. Retry without graphical tiles, update your drivers, or better yet update your GPU.", "GL error", MB_OK);
     exit(EXIT_FAILURE);
   }
 
@@ -265,7 +265,7 @@ void textures::grayscale_texture(long pos) {
  SDL_PixelFormat *f = s->format;
  Uint32 *pixels = (Uint32*)(s->pixels);
  if (f->BytesPerPixel != 4) {
-   std::cerr << "grayscale_texture ran into mysteriously uncanocalized texture\n";
+   std::cerr << "grayscale_texture ran into mysteriously uncanonicalized texture\n";
    goto cleanup;
  }
  for (int i=0; i < s->w*s->h; i++) { // For each pixel

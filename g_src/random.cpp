@@ -158,7 +158,7 @@ void push_trandom_double_seed(uint32_t newseed1,uint32_t newseed2)
 	uint32_t * b = mt_buffer[mt_cur_buffer];
 
 	b[0]=newseed1/2+newseed2/2;
-    for(i=0;i<MT_LEN;i++)
+    for(i=1;i<MT_LEN;i++)
 		{
 		b[i]=1812433253UL * (b[i-1] ^ (b[i-1]>>30)) + i;
 		}
@@ -182,7 +182,7 @@ void push_trandom_triple_seed(uint32_t newseed1,uint32_t newseed2,uint32_t newse
 	uint32_t * b = mt_buffer[mt_cur_buffer];
 
 	b[0]=newseed1/3+newseed2/3+newseed3/3;
-    for(i=0;i<MT_LEN;i++)
+    for(i=1;i<MT_LEN;i++)
 		{
 		b[i]=1812433253UL * (b[i-1] ^ (b[i-1]>>30)) + i;
 		}
