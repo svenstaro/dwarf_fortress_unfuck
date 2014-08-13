@@ -1617,7 +1617,6 @@ char standardstringentry(string &str,int maxlen,unsigned int flag,std::set<Inter
 		if(events.count(INTERFACEKEY_STRING_A124))entry=124;
 		if(events.count(INTERFACEKEY_STRING_A125))entry=125;
 		if(events.count(INTERFACEKEY_STRING_A126))entry=126;
-		if(events.count(INTERFACEKEY_STRING_A127))entry=127;
 		if(events.count(INTERFACEKEY_STRING_A128))entry=128;
 		if(events.count(INTERFACEKEY_STRING_A129))entry=129;
 		if(events.count(INTERFACEKEY_STRING_A130))entry=130;

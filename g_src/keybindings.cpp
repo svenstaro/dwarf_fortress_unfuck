@@ -606,6 +606,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_D_BURROWS_DELETE, "D_BURROWS_DELETE");
 	bindingNames.insert(INTERFACEKEY_D_BURROWS_DEFINE, "D_BURROWS_DEFINE");
 	bindingNames.insert(INTERFACEKEY_D_BURROWS_ADD_UNIT, "D_BURROWS_ADD_UNIT");
+	bindingNames.insert(INTERFACEKEY_D_BURROWS_WORKSHOP_LIMIT, "D_BURROWS_WORKSHOP_LIMIT");
 	bindingNames.insert(INTERFACEKEY_D_BURROWS_CENTER, "D_BURROWS_CENTER");
 	bindingNames.insert(INTERFACEKEY_D_BURROWS_NAME, "D_BURROWS_NAME");
 	bindingNames.insert(INTERFACEKEY_D_BURROWS_CHANGE_SELECTION, "D_BURROWS_CHANGE_SELECTION");
@@ -1094,6 +1095,10 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MIN_SIZE_DOWN, "BUILDING_TRIGGER_MIN_SIZE_DOWN");
 	bindingNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MAX_SIZE_UP, "BUILDING_TRIGGER_MAX_SIZE_UP");
 	bindingNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MAX_SIZE_DOWN, "BUILDING_TRIGGER_MAX_SIZE_DOWN");
+	bindingNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MIN_SIZE_UP_PLUS, "BUILDING_TRIGGER_MIN_SIZE_UP_PLUS");
+	bindingNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MIN_SIZE_DOWN_PLUS, "BUILDING_TRIGGER_MIN_SIZE_DOWN_PLUS");
+	bindingNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MAX_SIZE_UP_PLUS, "BUILDING_TRIGGER_MAX_SIZE_UP_PLUS");
+	bindingNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MAX_SIZE_DOWN_PLUS, "BUILDING_TRIGGER_MAX_SIZE_DOWN_PLUS");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_GEN, "UNITVIEW_GEN");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_INV, "UNITVIEW_INV");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_PRF, "UNITVIEW_PRF");
@@ -1239,7 +1244,6 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_STRING_A124, "STRING_A124");
 	bindingNames.insert(INTERFACEKEY_STRING_A125, "STRING_A125");
 	bindingNames.insert(INTERFACEKEY_STRING_A126, "STRING_A126");
-	bindingNames.insert(INTERFACEKEY_STRING_A127, "STRING_A127");
 	bindingNames.insert(INTERFACEKEY_STRING_A128, "STRING_A128");
 	bindingNames.insert(INTERFACEKEY_STRING_A129, "STRING_A129");
 	bindingNames.insert(INTERFACEKEY_STRING_A130, "STRING_A130");
@@ -2075,6 +2079,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_D_BURROWS_DELETE, "Main: Burrows, Delete");
 	displayNames.insert(INTERFACEKEY_D_BURROWS_DEFINE, "Main: Burrows, Define");
 	displayNames.insert(INTERFACEKEY_D_BURROWS_ADD_UNIT, "Main: Burrows, Add Citizen");
+	displayNames.insert(INTERFACEKEY_D_BURROWS_WORKSHOP_LIMIT, "Main: Burrows, Limit Workshops");
 	displayNames.insert(INTERFACEKEY_D_BURROWS_CENTER, "Main: Burrows, Center");
 	displayNames.insert(INTERFACEKEY_D_BURROWS_NAME, "Main: Burrows, Name");
 	displayNames.insert(INTERFACEKEY_D_BURROWS_CHANGE_SELECTION, "Main: Burrows, Change Selector");
@@ -2315,8 +2320,8 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_BUILDJOB_COFFIN_FREE, "Buildjob: Coffin, Free");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_COFFIN_SIZE, "Buildjob: Coffin, Size");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_COFFIN_BURIAL, "Buildjob: Coffin, Gen. Burial");
-	displayNames.insert(INTERFACEKEY_BUILDJOB_COFFIN_CIV, "Buildjob: Coffing, Allow Citizens");
-	displayNames.insert(INTERFACEKEY_BUILDJOB_COFFIN_PET, "Buildjob: Coffing, Allow Pets");
+	displayNames.insert(INTERFACEKEY_BUILDJOB_COFFIN_CIV, "Buildjob: Coffin, Allow Citizens");
+	displayNames.insert(INTERFACEKEY_BUILDJOB_COFFIN_PET, "Buildjob: Coffin, Allow Pets");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_CHAIR_ASSIGN, "Buildjob: Chair, Assign");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_CHAIR_FREE, "Buildjob: Chair, Free");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_CHAIR_SIZE, "Buildjob: Chair, Size");
@@ -2563,6 +2568,10 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MIN_SIZE_DOWN, "Building, Trigger, Min Size Down");
 	displayNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MAX_SIZE_UP, "Building, Trigger, Max Size Up");
 	displayNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MAX_SIZE_DOWN, "Building, Trigger, Max Size Down");
+	displayNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MIN_SIZE_UP_PLUS, "Building, Trigger, Min Size Up+");
+	displayNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MIN_SIZE_DOWN_PLUS, "Building, Trigger, Min Size Down+");
+	displayNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MAX_SIZE_UP_PLUS, "Building, Trigger, Max Size Up+");
+	displayNames.insert(INTERFACEKEY_BUILDING_TRIGGER_MAX_SIZE_DOWN_PLUS, "Building, Trigger, Max Size Down+");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_GEN, "Unitview, General");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_INV, "Unitview, Inventory");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_PRF, "Unitview, Prefs");
@@ -2708,7 +2717,6 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_STRING_A124, "String: Character 124");
 	displayNames.insert(INTERFACEKEY_STRING_A125, "String: Character 125");
 	displayNames.insert(INTERFACEKEY_STRING_A126, "String: Character 126");
-	displayNames.insert(INTERFACEKEY_STRING_A127, "String: Character 127");
 	displayNames.insert(INTERFACEKEY_STRING_A128, "String: Character 128");
 	displayNames.insert(INTERFACEKEY_STRING_A129, "String: Character 129");
 	displayNames.insert(INTERFACEKEY_STRING_A130, "String: Character 130");
