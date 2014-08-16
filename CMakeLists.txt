@@ -9,7 +9,7 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 8) # 64 bit architecture detected
     set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -m32")
 endif()
 
-set(CMAKE_BUILD_TYPE RelWithDebInfo)
+set(CMAKE_BUILD_TYPE Debug)
 
 add_definitions(-Dunix -Dlinux -std=c++11)
 
