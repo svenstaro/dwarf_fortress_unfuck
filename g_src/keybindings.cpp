@@ -2445,9 +2445,9 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_MANAGER_MAX, "Manager, Max");
 	displayNames.insert(INTERFACEKEY_MANAGER_WAGES, "Manager, Wages");
 	displayNames.insert(INTERFACEKEY_PET_BUTCHER, "Animals, Slaughter");
-	bindingNames.insert(INTERFACEKEY_ANIMAL_SELECT_TRAINER, "Animals, Trainer");
-	bindingNames.insert(INTERFACEKEY_ANIMAL_WAR_TRAINING, "Animals, War Training");
-	bindingNames.insert(INTERFACEKEY_ANIMAL_HUNTING_TRAINING, "Animals, Hunting Training");
+	displayNames.insert(INTERFACEKEY_ANIMAL_SELECT_TRAINER, "Animals, Trainer");
+	displayNames.insert(INTERFACEKEY_ANIMAL_WAR_TRAINING, "Animals, War Training");
+	displayNames.insert(INTERFACEKEY_ANIMAL_HUNTING_TRAINING, "Animals, Hunting Training");
 	displayNames.insert(INTERFACEKEY_KITCHEN_COOK, "Kitchen, Cook");
 	displayNames.insert(INTERFACEKEY_KITCHEN_BREW, "Kitchen, Brew");
 	displayNames.insert(INTERFACEKEY_SETUPGAME_NEW, "Setup, New");
