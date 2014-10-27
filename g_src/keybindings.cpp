@@ -990,8 +990,13 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_CIVZONE_NEXT, "CIVZONE_NEXT");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_POND_OPTIONS, "CIVZONE_POND_OPTIONS");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_HOSPITAL_OPTIONS, "CIVZONE_HOSPITAL_OPTIONS");
+	bindingNames.insert(INTERFACEKEY_CIVZONE_GATHER_OPTIONS, "CIVZONE_GATHER_OPTIONS");
+	bindingNames.insert(INTERFACEKEY_CIVZONE_GATHER_OPTIONS_PICK_TREES, "CIVZONE_GATHER_OPTIONS_PICK_TREES");
+	bindingNames.insert(INTERFACEKEY_CIVZONE_GATHER_OPTIONS_PICK_SHRUBS, "CIVZONE_GATHER_OPTIONS_PICK_SHRUBS");
+	bindingNames.insert(INTERFACEKEY_CIVZONE_GATHER_OPTIONS_GATHER_FALLEN, "CIVZONE_GATHER_OPTIONS_GATHER_FALLEN");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_WATER_SOURCE, "CIVZONE_WATER_SOURCE");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_FISH, "CIVZONE_FISH");
+	bindingNames.insert(INTERFACEKEY_CIVZONE_GATHER, "CIVZONE_GATHER");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_DUMP, "CIVZONE_DUMP");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_POND, "CIVZONE_POND");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_HOSPITAL, "CIVZONE_HOSPITAL");
@@ -2462,6 +2467,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_CIVZONE_SHAPE, "Main: Activity Zone, Shape");
 	displayNames.insert(INTERFACEKEY_CIVZONE_NEXT, "Main: Activity Zone, Next");
 	displayNames.insert(INTERFACEKEY_CIVZONE_WATER_SOURCE, "Main: Activity Zone, Water Source");
+	displayNames.insert(INTERFACEKEY_CIVZONE_GATHER, "Main: Activity Zone, Gather");
 	displayNames.insert(INTERFACEKEY_CIVZONE_DUMP, "Main: Activity Zone, Garbage Dump");
 	displayNames.insert(INTERFACEKEY_CIVZONE_POND, "Main: Activity Zone, Pond");
 	displayNames.insert(INTERFACEKEY_CIVZONE_HOSPITAL, "Main: Activity Zone, Hospital");
@@ -2474,6 +2480,10 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_CIVZONE_POND_OPTIONS, "Main: Activity Zone, Pond Options");
 	displayNames.insert(INTERFACEKEY_CIVZONE_POND_WATER, "Main: Activity Zone: Pond, Water");
 	displayNames.insert(INTERFACEKEY_CIVZONE_HOSPITAL_OPTIONS, "Main: Activity Zone, Hospital Options");
+	displayNames.insert(INTERFACEKEY_CIVZONE_GATHER_OPTIONS, "Main: Activity Zone, Gather Options");
+	displayNames.insert(INTERFACEKEY_CIVZONE_GATHER_OPTIONS_PICK_TREES, "Main: Activity Zone, Gather Options, Pick Trees");
+	displayNames.insert(INTERFACEKEY_CIVZONE_GATHER_OPTIONS_PICK_SHRUBS, "Main: Activity Zone, Gather Options, Pick Shrubs");
+	displayNames.insert(INTERFACEKEY_CIVZONE_GATHER_OPTIONS_GATHER_FALLEN, "Main: Activity Zone, Gather Options, Gather Fallen");
 	displayNames.insert(INTERFACEKEY_CIVZONE_PEN, "Main: Activity Zone, Pen");
 	displayNames.insert(INTERFACEKEY_CIVZONE_PEN_OPTIONS, "Main: Activity Zone, Pen Options");
 	displayNames.insert(INTERFACEKEY_STOCKPILE_ANIMAL, "Stockpile, Animal");
