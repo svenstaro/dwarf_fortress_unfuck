@@ -803,20 +803,6 @@ int main (int argc, char* argv[]) {
   return result;
 }
 
-char get_slot_and_addbit_uchar(unsigned char &addbit,long &slot,long checkflag,long slotnum)
-{
-  if(checkflag<0)return 0;
-
-  //FIND PROPER SLOT
-  slot=checkflag>>3;
-  if(slot>=slotnum)return 0;
-
-  //FIND PROPER BIT IN THAT SLOT
-  addbit=1<<(checkflag%8);
-
-  return 1;
-}
-
 void text_system_file_infost::initialize_info()
 {
   std::ifstream fseed(filename.c_str());

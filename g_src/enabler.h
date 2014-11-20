@@ -88,8 +88,6 @@ using std::queue;
 
 #define GAME_TITLE_STRING "Dwarf Fortress"
 
-char get_slot_and_addbit_uchar(unsigned char &addbit,long &slot,long checkflag,long slotnum);
-
 class pstringst
 {
  public:
@@ -269,43 +267,30 @@ class flagarrayst
 
 		bool has_flag(long checkflag)
 			{
-			long slot;
-			unsigned char addbit;
-			if(get_slot_and_addbit_uchar(addbit,slot,checkflag,slotnum))
-				{
-				return (array[slot]&addbit)!=0;
-				}
-			else return false;
+			if(checkflag<0)return false;
+			long slot=checkflag>>3;
+			return (slot>=0&&slot<slotnum&&((array[slot] & (1<<(checkflag&7)))!=0));
 			}
 
 		void add_flag(long checkflag)
 			{
-			long slot;
-			unsigned char addbit;
-			if(get_slot_and_addbit_uchar(addbit,slot,checkflag,slotnum))
-				{
-				array[slot]|=addbit;
-				}
+			if(checkflag<0)return;
+			long slot=checkflag>>3;
+			if(slot>=0&&slot<slotnum)array[slot]|=(1<<(checkflag&7));
 			}
 
 		void toggle_flag(long checkflag)
 			{
-			long slot;
-			unsigned char addbit;
-			if(get_slot_and_addbit_uchar(addbit,slot,checkflag,slotnum))
-				{
-				array[slot]^=addbit;
-				}
+			if(checkflag<0)return;
+			long slot=checkflag>>3;
+			if(slot>=0&&slot<slotnum)array[slot]^=(1<<(checkflag&7));
 			}
 
 		void remove_flag(long checkflag)
 			{
-			long slot;
-			unsigned char addbit;
-			if(get_slot_and_addbit_uchar(addbit,slot,checkflag,slotnum))
-				{
-				array[slot]&=~addbit;
-				}
+			if(checkflag<0)return;
+			long slot=checkflag>>3;
+			if(slot>=0&&slot<slotnum)array[slot]&=~(1<<(checkflag&7));
 			}
 
 		void write_file(file_compressorst &filecomp)
@@ -341,6 +326,8 @@ class flagarrayst
 				{
 				delete[] array;
 				array=NULL;
+
+				slotnum=0;
 				}
 			}
 
