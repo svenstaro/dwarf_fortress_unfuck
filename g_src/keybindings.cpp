@@ -972,6 +972,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_MANAGER_MAX, "MANAGER_MAX");
 	bindingNames.insert(INTERFACEKEY_MANAGER_WAGES, "MANAGER_WAGES");
 	bindingNames.insert(INTERFACEKEY_PET_BUTCHER, "PET_BUTCHER");
+	bindingNames.insert(INTERFACEKEY_PET_GELD, "PET_GELD");
 	bindingNames.insert(INTERFACEKEY_ANIMAL_SELECT_TRAINER, "ANIMAL_SELECT_TRAINER");
 	bindingNames.insert(INTERFACEKEY_ANIMAL_WAR_TRAINING, "ANIMAL_WAR_TRAINING");
 	bindingNames.insert(INTERFACEKEY_ANIMAL_HUNTING_TRAINING, "ANIMAL_HUNTING_TRAINING");
@@ -1111,6 +1112,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_FOLLOW, "UNITVIEW_FOLLOW");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_NEXT, "UNITVIEW_NEXT");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_SLAUGHTER, "UNITVIEW_SLAUGHTER");
+	bindingNames.insert(INTERFACEKEY_UNITVIEW_GELD, "UNITVIEW_GELD");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_GEN_COMBAT, "UNITVIEW_GEN_COMBAT");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_GEN_LABOR, "UNITVIEW_GEN_LABOR");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_GEN_MISC, "UNITVIEW_GEN_MISC");
@@ -2450,6 +2452,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_MANAGER_MAX, "Manager, Max");
 	displayNames.insert(INTERFACEKEY_MANAGER_WAGES, "Manager, Wages");
 	displayNames.insert(INTERFACEKEY_PET_BUTCHER, "Animals, Slaughter");
+	displayNames.insert(INTERFACEKEY_PET_GELD, "Animals, Geld");
 	displayNames.insert(INTERFACEKEY_ANIMAL_SELECT_TRAINER, "Animals, Trainer");
 	displayNames.insert(INTERFACEKEY_ANIMAL_WAR_TRAINING, "Animals, War Training");
 	displayNames.insert(INTERFACEKEY_ANIMAL_HUNTING_TRAINING, "Animals, Hunting Training");
@@ -2589,6 +2592,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_UNITVIEW_NEXT, "Unitview, Next Unit");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_FOLLOW, "Unitview, Follow");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_SLAUGHTER, "Unitview, Slaughter");
+	displayNames.insert(INTERFACEKEY_UNITVIEW_GELD, "Unitview, Geld");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_GEN_COMBAT, "Unitview, General, Combat");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_GEN_LABOR, "Unitview, General, Labor");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_GEN_MISC, "Unitview, General, Misc");
