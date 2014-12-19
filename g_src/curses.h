@@ -6,6 +6,7 @@ extern "C" {
 #if defined(__unix__) || defined(__APPLE__)
 #ifdef __APPLE__
 # include <curses.h>
+# include <ncurses.h>
 #else
 # include <curses.h>
 #endif

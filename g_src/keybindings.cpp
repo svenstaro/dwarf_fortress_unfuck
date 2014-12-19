@@ -813,6 +813,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_ADD, "BUILDJOB_ADD");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_CANCEL, "BUILDJOB_CANCEL");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_PROMOTE, "BUILDJOB_PROMOTE");
+	bindingNames.insert(INTERFACEKEY_BUILDJOB_NOW, "BUILDJOB_NOW");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_REPEAT, "BUILDJOB_REPEAT");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_SUSPEND, "BUILDJOB_SUSPEND");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_WORKSHOP_PROFILE, "BUILDJOB_WORKSHOP_PROFILE");
@@ -1060,6 +1061,9 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_FORTIFY, "DESIGNATE_FORTIFY");
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_TRACK, "DESIGNATE_TRACK");
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_TOGGLE_ENGRAVING, "DESIGNATE_TOGGLE_ENGRAVING");
+	bindingNames.insert(INTERFACEKEY_DESIGNATE_STANDARD_MARKER, "DESIGNATE_STANDARD_MARKER");
+	bindingNames.insert(INTERFACEKEY_DESIGNATE_MINE_MODE, "DESIGNATE_MINE_MODE");
+	bindingNames.insert(INTERFACEKEY_DESIGNATE_TOGGLE_MARKER, "DESIGNATE_TOGGLE_MARKER");
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_UNDO, "DESIGNATE_UNDO");
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_REMOVE_CONSTRUCTION, "DESIGNATE_REMOVE_CONSTRUCTION");
 	bindingNames.insert(INTERFACEKEY_BUILDING_DIM_Y_UP, "BUILDING_DIM_Y_UP");
@@ -2293,6 +2297,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_BUILDJOB_ADD, "Buildjob: Add");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_CANCEL, "Buildjob: Cancel");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_PROMOTE, "Buildjob: Promote");
+	displayNames.insert(INTERFACEKEY_BUILDJOB_NOW, "Buildjob: Now");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_REPEAT, "Buildjob: Repeat");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_SUSPEND, "Buildjob: Suspend");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_WORKSHOP_PROFILE, "Buildjob: Workshop Profile");
@@ -2540,6 +2545,9 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_DESIGNATE_FORTIFY, "Designate, Fortify");
 	displayNames.insert(INTERFACEKEY_DESIGNATE_TRACK, "Designate, Carve Track");
 	displayNames.insert(INTERFACEKEY_DESIGNATE_TOGGLE_ENGRAVING, "Designate, Toggle Engraving");
+	displayNames.insert(INTERFACEKEY_DESIGNATE_STANDARD_MARKER, "Designate, Standard/Marker");
+	displayNames.insert(INTERFACEKEY_DESIGNATE_MINE_MODE, "Designate, Mine Mode");
+	displayNames.insert(INTERFACEKEY_DESIGNATE_TOGGLE_MARKER, "Designate, Toggle Marker");
 	displayNames.insert(INTERFACEKEY_DESIGNATE_UNDO, "Designate, Undo");
 	displayNames.insert(INTERFACEKEY_DESIGNATE_REMOVE_CONSTRUCTION, "Designate, Remove Construction");
 	displayNames.insert(INTERFACEKEY_BUILDING_DIM_Y_UP, "Building, Change Height +");
