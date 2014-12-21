@@ -3,26 +3,25 @@
 
 extern "C" {
 #include "GL/glew.h"
-#if defined(__unix__) || defined(__APPLE__)
-#ifdef __APPLE__
+#ifndef __APPLE__
+#ifdef unix
 # include <curses.h>
-# include <ncurses.h>
-#else
-# include <curses.h>
-#endif
 # undef COLOR_BLUE
 # undef COLOR_CYAN
 # undef COLOR_RED
 # undef COLOR_YELLOW
 # include <dlfcn.h>
 #endif
+#endif
 }
 
-#if defined(__unix__) || defined(__APPLE__)
+#ifndef __APPLE__
+#ifdef unix
 extern "C" {
   void init_curses();
   extern WINDOW **stdscr_p;
 };
+#endif
 #endif
 
 
