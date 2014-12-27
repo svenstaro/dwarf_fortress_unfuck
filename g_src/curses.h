@@ -5,7 +5,7 @@ extern "C" {
 #include "GL/glew.h"
 #ifndef __APPLE__
 #ifdef unix
-# include <curses.h>
+# include <ncursesw/curses.h>
 # undef COLOR_BLUE
 # undef COLOR_CYAN
 # undef COLOR_RED
