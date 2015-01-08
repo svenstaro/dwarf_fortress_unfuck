@@ -1,6 +1,10 @@
 #ifndef ENABLER_INPUT_H
 #define ENABLER_INPUT_H
 
+#ifdef __APPLE__
+#define _XOPEN_SOURCE_EXTENDED
+#endif
+
 #include <SDL/SDL.h>
 #include <string>
 #include <set>

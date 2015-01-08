@@ -62,6 +62,10 @@ typedef int32_t Ordinal;
 
 #include "interface.h"
 
+#ifdef __APPLE__
+#define _XOPEN_SOURCE_EXTENDED
+#endif
+
 #include "curses.h"
 
 using namespace std;

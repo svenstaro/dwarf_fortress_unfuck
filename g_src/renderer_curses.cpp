@@ -300,9 +300,17 @@ extern "C" {
       if (handle) goto opened;
       puts("Didn't find any flavor of libncursesw, attempting libncurses");
       sleep(5);
+      handle = dlopen("libncurses.dylib", RTLD_LAZY);
+      if (handle) goto opened;
       handle = dlopen("libncurses.so.5", RTLD_LAZY);
       if (handle) goto opened;
       handle = dlopen("libncurses.so", RTLD_LAZY);
+      if (handle) goto opened;
+      handle = dlopen("libncurses.5.4.dylib", RTLD_LAZY);
+      if (handle) goto opened;
+      handle = dlopen("/usr/lib/libncurses.dylib", RTLD_LAZY);
+      if (handle) goto opened;
+      handle = dlopen("/usr/lib/libncurses.5.4.dylib", RTLD_LAZY);
       if (handle) goto opened;
 
     opened:

@@ -296,7 +296,7 @@ void KeybindingScreen::render_register() {
     keyRegister.render(x1+1, x2-1, y1+1, y2-1);
     gps.locate(y2, x1+2);
     gps.changecolor(7,1,1);
-    gps.addst("Select binding, or press space to abort");
+    gps.addst("Select binding, or press " + enabler.GetKeyDisplay(INTERFACEKEY_LEAVESCREEN) + " to abort");
   }
 }
 

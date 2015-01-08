@@ -377,6 +377,7 @@ static bool linkit(void **target, const char *symbol, void *handle) {
 
 static bool init_openal() {
   void *handle = dlopen("libopenal.so", RTLD_LAZY);
+  if (!handle) handle = dlopen("libopenal.so.1", RTLD_LAZY);
   if (!handle) return false;
   
   if (!linkit((void**)&_alEnable, "alEnable", handle)) return false;
