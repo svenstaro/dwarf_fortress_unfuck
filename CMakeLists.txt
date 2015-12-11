@@ -11,7 +11,7 @@ endif()
 
 set(CMAKE_BUILD_TYPE Debug)
 
-add_definitions(-Dunix -Dlinux -std=c++11)
+add_definitions(-Dunix -Dlinux -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0)
 
 find_package(OpenGL REQUIRED)
 find_package(SDL REQUIRED)
