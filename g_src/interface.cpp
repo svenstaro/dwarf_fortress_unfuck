@@ -1765,6 +1765,7 @@ char standardstringentry(string &str,int maxlen,unsigned int flag,std::set<Inter
 			else str[cursor]=entry;
 			}
 
+		events.clear();
 
 		return 1;
 		}
