@@ -49,6 +49,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_SETUP_EMBARK, "SETUP_EMBARK");
 	bindingNames.insert(INTERFACEKEY_SETUP_NAME_FORT, "SETUP_NAME_FORT");
 	bindingNames.insert(INTERFACEKEY_SETUP_NAME_GROUP, "SETUP_NAME_GROUP");
+	bindingNames.insert(INTERFACEKEY_SETUP_SYMBOL, "SETUP_SYMBOL");
 	bindingNames.insert(INTERFACEKEY_SETUP_RECLAIM, "SETUP_RECLAIM");
 	bindingNames.insert(INTERFACEKEY_SETUP_FIND, "SETUP_FIND");
 	bindingNames.insert(INTERFACEKEY_SETUP_NOTES, "SETUP_NOTES");
@@ -180,6 +181,9 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_KILLS, "UNITVIEW_KILLS");
 	bindingNames.insert(INTERFACEKEY_CUSTOMIZE_UNIT_NICKNAME, "CUSTOMIZE_UNIT_NICKNAME");
 	bindingNames.insert(INTERFACEKEY_CUSTOMIZE_UNIT_PROFNAME, "CUSTOMIZE_UNIT_PROFNAME");
+	bindingNames.insert(INTERFACEKEY_IMAGE_CREATOR_FILTER, "IMAGE_CREATOR_FILTER");
+	bindingNames.insert(INTERFACEKEY_IMAGE_CREATOR_NAME, "IMAGE_CREATOR_NAME");
+	bindingNames.insert(INTERFACEKEY_IMAGE_CREATOR_DONE, "IMAGE_CREATOR_DONE");
 	bindingNames.insert(INTERFACEKEY_A_CLEAR_ANNOUNCEMENTS, "A_CLEAR_ANNOUNCEMENTS");
 	bindingNames.insert(INTERFACEKEY_A_SLEEP, "A_SLEEP");
 	bindingNames.insert(INTERFACEKEY_A_SLEEP_SLEEP, "A_SLEEP_SLEEP");
@@ -1083,6 +1087,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_PLANTS, "DESIGNATE_PLANTS");
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_SMOOTH, "DESIGNATE_SMOOTH");
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_ENGRAVE, "DESIGNATE_ENGRAVE");
+	bindingNames.insert(INTERFACEKEY_DESIGNATE_DETAILS, "DESIGNATE_DETAILS");
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_FORTIFY, "DESIGNATE_FORTIFY");
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_TRACK, "DESIGNATE_TRACK");
 	bindingNames.insert(INTERFACEKEY_DESIGNATE_TOGGLE_ENGRAVING, "DESIGNATE_TOGGLE_ENGRAVING");
@@ -1559,6 +1564,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_SETUP_EMBARK, "Setup game: Embark");
 	displayNames.insert(INTERFACEKEY_SETUP_NAME_FORT, "Setup game: Name Fort");
 	displayNames.insert(INTERFACEKEY_SETUP_NAME_GROUP, "Setup game: Name Group");
+	displayNames.insert(INTERFACEKEY_SETUP_SYMBOL, "Setup game: Symbol");
 	displayNames.insert(INTERFACEKEY_SETUP_RECLAIM, "Setup game: Reclaim");
 	displayNames.insert(INTERFACEKEY_SETUP_FIND, "Setup game: Find");
 	displayNames.insert(INTERFACEKEY_SETUP_NOTES, "Setup game: Notes");
@@ -1690,6 +1696,9 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_UNITVIEW_KILLS, "Unit View, Kills");
 	displayNames.insert(INTERFACEKEY_CUSTOMIZE_UNIT_NICKNAME, "Customize Unit, Nickname");
 	displayNames.insert(INTERFACEKEY_CUSTOMIZE_UNIT_PROFNAME, "Customize Unit, Profession");
+	displayNames.insert(INTERFACEKEY_IMAGE_CREATOR_FILTER, "Image Creator: Filter");
+	displayNames.insert(INTERFACEKEY_IMAGE_CREATOR_NAME, "Image Creator: Name");
+	displayNames.insert(INTERFACEKEY_IMAGE_CREATOR_DONE, "Image Creator: Done");
 	displayNames.insert(INTERFACEKEY_A_CLEAR_ANNOUNCEMENTS, "Adventure: Clear announcements");
 	displayNames.insert(INTERFACEKEY_A_SLEEP, "Adventure: Sleep");
 	displayNames.insert(INTERFACEKEY_A_SLEEP_SLEEP, "Adventure: Sleep, Sleep");
@@ -2593,6 +2602,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_DESIGNATE_PLANTS, "Designate, Plants");
 	displayNames.insert(INTERFACEKEY_DESIGNATE_SMOOTH, "Designate, Smooth");
 	displayNames.insert(INTERFACEKEY_DESIGNATE_ENGRAVE, "Designate, Engrave");
+	displayNames.insert(INTERFACEKEY_DESIGNATE_DETAILS, "Designate, Details");
 	displayNames.insert(INTERFACEKEY_DESIGNATE_FORTIFY, "Designate, Fortify");
 	displayNames.insert(INTERFACEKEY_DESIGNATE_TRACK, "Designate, Carve Track");
 	displayNames.insert(INTERFACEKEY_DESIGNATE_TOGGLE_ENGRAVING, "Designate, Toggle Engraving");
