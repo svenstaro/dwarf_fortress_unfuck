@@ -50,6 +50,9 @@ SET(SOURCES
 	g_src/win32_compat.cpp g_src/music_and_sound_openal.cpp
 )
 
+# Fix a weird case where despite our global property set at the top, it still picks up lib64 paths.
+string(REPLACE "lib64" "lib32" GTK2_INCLUDE_DIRS "${GTK2_INCLUDE_DIRS}")
+
 include_directories(
     ${OPENGL_INCLUDE_DIR}
     ${SDL_INCLUDE_DIR}
