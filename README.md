@@ -18,11 +18,11 @@ dev packages installed.
 
 Have [multilib] enabled in pacman.conf. And then run:  
 
-```pacman -S gcc-multilib lib32-{sdl,sdl_image,sdl_ttf,openal,pango,atk,gdk-pixbuf2,gtk2,ncurses,glew}```
+```pacman -S gcc-multilib lib32-{sdl,sdl_image,sdl_ttf,openal,pango,atk,gdk-pixbuf2,gtk2,ncurses,glew,zlib}```
 
 ### Fedora 20
 
-```yum install gcc gcc-c++ cmake automake libXext-devel.i686 atk-devel.i686 cairo-devel.i686 gdk-pixbuf2-devel.i686 fontconfig-devel.i686 openal-soft-devel.i686 SDL_image-devel.i686 SDL_ttf-devel.i686 freetype-devel.i686 libX11-devel.i686 libICE-devel.i686 libSM-devel.i686 mesa-libGL.i686 mesa-libGL-devel.i686 glib2-devel.i686 mesa-libGLU-devel.i686 pango-devel.i686 ncurses-devel.i686 libsndfile-devel.i686 gtk2-devel.i686 glew-devel.i686 SDL-devel.i686 glibc-devel.i686```
+```yum install gcc gcc-c++ cmake automake libXext-devel.i686 atk-devel.i686 cairo-devel.i686 gdk-pixbuf2-devel.i686 fontconfig-devel.i686 openal-soft-devel.i686 SDL_image-devel.i686 SDL_ttf-devel.i686 freetype-devel.i686 libX11-devel.i686 libICE-devel.i686 libSM-devel.i686 mesa-libGL.i686 mesa-libGL-devel.i686 glib2-devel.i686 mesa-libGLU-devel.i686 pango-devel.i686 ncurses-devel.i686 libsndfile-devel.i686 gtk2-devel.i686 glew-devel.i686 SDL-devel.i686 glibc-devel.i686 zlib.i686```
 
 ## Building Library
 

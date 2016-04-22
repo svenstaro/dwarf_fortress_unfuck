@@ -24,6 +24,7 @@ find_package(OpenAL REQUIRED)
 find_package(Freetype REQUIRED)
 find_package(Threads REQUIRED)
 find_package(X11 REQUIRED)
+find_package(ZLIB REQUIRED)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)
@@ -64,6 +65,7 @@ include_directories(
     ${FREETYPE_INCLUDE_DIRS}
     ${X11_INCLUDE_DIR}
     ${CURSES_INCLUDE_DIR}
+    ${ZLIB_INCLUDE_DIR}
 )
 
 add_library(graphics SHARED ${SOURCES})
@@ -78,4 +80,5 @@ target_link_libraries(graphics
     ${FREETYPE_LIBRARIES}
     ${X11_LIBRARIES}
     ${CURSES_LIBRARIES}
+    ${ZLIB_LIBRARIES}
 )
