@@ -30,7 +30,7 @@ class file_compressorst
 
 		void write_file_fixedlength(char *var)
 			{
-			short len=strlen(var);
+			short len=(short)strlen(var);
 			write_file(len);
 			if(len>0)write_file(var,len*sizeof(char));
 			}

@@ -20,6 +20,10 @@ using namespace std;
 
 enablerst enabler;
 
+#ifdef WIN32
+//NOTE: TO FIX SDL LINKER ERROR THAT CAME UP WITH VISUAL STUDIO 2015
+extern "C" { FILE __iob_func[3] = { *stdin,*stdout,*stderr }; }
+#endif
 
 // For the printGLError macro
 int glerrorcount = 0;

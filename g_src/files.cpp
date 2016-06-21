@@ -93,7 +93,7 @@ char file_compressorst::save_posnull_pointer(void *ptr)
 
 char file_compressorst::write_file(string &str)
 {
-	short ln=str.length();
+	short ln=(short)str.length();
 	if(ln>=10000||ln<0)ln=0;
 
 	if(!write_file(ln))return 0;

@@ -1,7 +1,5 @@
 #include "keybindings.h"
 
-#include <SDL/SDL.h>
-
 using namespace std;
 
 bimap<InterfaceKey,std::string> bindingNames;

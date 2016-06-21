@@ -1104,7 +1104,7 @@ template<class T> int32_t get_index_from_local_id_vector(int32_t id,svector<T> &
 
 template<class T> void add_to_short_id_vector(T ptr,svector<T> &vect)
 {
-	int16_t size=vect.size();
+	int16_t size=(int16_t)vect.size();
 	if(size==0)
 		{
 		vect.push_back(ptr);

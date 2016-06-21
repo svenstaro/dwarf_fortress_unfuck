@@ -1,4 +1,3 @@
-#include <SDL/SDL.h>
 #include <map>
 #include <vector>
 #include <iostream>
@@ -7,6 +6,8 @@
 #include <stdlib.h>
 #include <math.h>
 using namespace std;
+
+#include <SDL/SDL.h>
 
 #include "enabler_input.h"
 #include "init.h"
@@ -998,6 +999,9 @@ void enabler_inputst::load_macro(string name) {
 
 void enabler_inputst::save_macro(string name) {
   macros[name] = active_macro;
+  CreateDirectory("data",NULL);
+  CreateDirectory("data/init",NULL);
+  CreateDirectory("data/init/macros",NULL);
   save_macro_to_file("data/init/macros/" + filter_filename(name, '_') + ".mak", name, active_macro);
 }
 

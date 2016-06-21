@@ -1,7 +1,6 @@
 #ifndef KEYBINDINGS_H
 #define KEYBINDINGS_H
 
-#include <SDL/SDL.h>
 #include <map>
 #include <string>
 
@@ -1578,6 +1577,8 @@ enum InterfaceKeyType
 	INTERFACEKEY_KEYBINDING_COMPLETE,
 	INTERFACEKEYNUM,
 };
+
+#include <SDL/SDL.h>
 
 extern bimap<InterfaceKey,std::string> bindingNames;
 extern bimap<InterfaceKey,std::string> displayNames;

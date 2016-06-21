@@ -5,7 +5,6 @@
 #define _XOPEN_SOURCE_EXTENDED
 #endif
 
-#include <SDL/SDL.h>
 #include <string>
 #include <set>
 #include <list>
@@ -13,6 +12,8 @@
 #include "ViewBase.h"
 #include "keybindings.h"
 #include "curses.h"
+
+#include <SDL/SDL.h>
 
 typedef Uint32 Time;
 

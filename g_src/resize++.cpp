@@ -1,9 +1,10 @@
 #include <cmath>
+#include <algorithm>
 #include <vector>
 
-#include <SDL/SDL.h>
-
 #include "resize++.h"
+
+#include <SDL/SDL.h>
 
 //code adapted by David Olsen from Lanczos filtering article on wikipedia.org
 
