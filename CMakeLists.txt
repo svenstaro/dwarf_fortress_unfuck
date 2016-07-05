@@ -1,14 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 project(graphics)
 
-if(CMAKE_SIZEOF_VOID_P EQUAL 8) # 64 bit architecture detected
-    message("Detected 64bit build arch. Setting 32bit build options.")
-    message("This requires a multilib cross-compiler. Let's hope you have one.")
-    SET_PROPERTY(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS 0)
-    add_definitions(-m32)
-    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -m32")
-endif()
-
 set(CMAKE_BUILD_TYPE Debug)
 
 add_definitions(-Dunix -Dlinux -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0)
@@ -50,9 +42,6 @@ SET(SOURCES
 	g_src/textures.cpp g_src/textlines.cpp g_src/ttf_manager.cpp g_src/ViewBase.cpp
 	g_src/win32_compat.cpp g_src/music_and_sound_openal.cpp
 )
-
-# Fix a weird case where despite our global property set at the top, it still picks up lib64 paths.
-string(REPLACE "lib64" "lib32" GTK2_INCLUDE_DIRS "${GTK2_INCLUDE_DIRS}")
 
 include_directories(
     ${OPENGL_INCLUDE_DIR}
