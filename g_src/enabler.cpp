@@ -20,11 +20,6 @@ using namespace std;
 
 enablerst enabler;
 
-#ifdef WIN32
-//NOTE: TO FIX SDL LINKER ERROR THAT CAME UP WITH VISUAL STUDIO 2015
-extern "C" { FILE __iob_func[3] = { *stdin,*stdout,*stderr }; }
-#endif
-
 // For the printGLError macro
 int glerrorcount = 0;
 
@@ -536,10 +531,12 @@ void enablerst::eventLoop_SDL()
       unpause_async_loop();
 
     do_frame();
+	/*
 #if !defined(NO_FMOD)
     // Call FMOD::System.update(). Manages a bunch of sound stuff.
     musicsound.update();
 #endif
+	*/
   }
 }
 
@@ -654,7 +651,7 @@ void enablerst::do_update_fps(queue<int> &q, int &sum, int &last, int &calc) {
   sum += interval;
   last = now;
   if (sum)
-    calc = q.size() * 1000 / sum;
+    calc = (int)q.size() * 1000 / sum;
 }
 
 void enablerst::clear_fps() {
@@ -857,7 +854,7 @@ void text_system_file_infost::get_text(text_infost &text)
 	  char doing_long=0;
 
 	  text_info_elementst *newel;
-	  long end=str.length();
+	  long end=(long)str.length();
 			
 	  while(end>0)
 	    {

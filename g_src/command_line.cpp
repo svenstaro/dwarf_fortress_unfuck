@@ -77,7 +77,7 @@ void command_linest::handle_arg(string &arg)
 	string dest;
 
 	grab_token_string_pos(dest,arg,pos,' ');
-	pos+=dest.length();
+	pos+=(int32_t)dest.length();
 
 	short arg_pos=0;
 	if(dest=="gen")
@@ -102,7 +102,7 @@ void command_linest::handle_arg(string &arg)
 				else if((*s)==' '&&!quote)break;
 				dest+=(*s);
 				}
-			pos+=dest.length();
+			pos+=(int32_t)dest.length();
 
 
 			if(!dest.empty())

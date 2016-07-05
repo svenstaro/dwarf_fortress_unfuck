@@ -23,13 +23,16 @@ extern "C" {
 }
 #include "svector.h"
 
-#ifdef WIN32
-
 #ifndef INTEGER_TYPES
-	#define INTEGER_TYPES
+
+#define INTEGER_TYPES
+
+#ifdef WIN32
+	typedef signed char int8_t;
 	typedef short int16_t;
 	typedef int int32_t;
 	typedef long long int64_t;
+	typedef unsigned char uint8_t;
 	typedef unsigned short uint16_t;
 	typedef unsigned int uint32_t;
 	typedef unsigned long long uint64_t;
@@ -66,7 +69,7 @@ char file_compressorst::def_obuff[FILE_OUT_BUFF];
 
 char file_compressorst::load_posnull_pointer()
 {
-	char dummy;
+	int8_t dummy;
 	read_file(dummy);
 
 	if(!dummy)return 0;
@@ -75,7 +78,7 @@ char file_compressorst::load_posnull_pointer()
 
 char file_compressorst::save_posnull_pointer(void *ptr)
 {
-	char dummy;
+	int8_t dummy;
 
 	if(ptr==NULL)
 		{
@@ -93,7 +96,7 @@ char file_compressorst::save_posnull_pointer(void *ptr)
 
 char file_compressorst::write_file(string &str)
 {
-	short ln=(short)str.length();
+	int16_t ln=(int16_t)str.length();
 	if(ln>=10000||ln<0)ln=0;
 
 	if(!write_file(ln))return 0;
@@ -109,7 +112,7 @@ char file_compressorst::read_file(string &str)
 {
 	str.erase();
 
-	short ln;
+	int16_t ln;
 
 	if(!read_file(ln))return 0;
 
@@ -210,10 +213,10 @@ char file_compressorst::flush_in_buffer()
 	//SAVE THE COMPRESSED BIT AS A GIANT BLOCK
 	if(c_stream.total_out>0)
 		{
-		long compsize=byteswap((long)(c_stream.total_out));
+		int32_t compsize=byteswap((int32_t)(c_stream.total_out));
 
 		//WRITE IT
-		f.write((char*)&compsize,sizeof(long));
+		f.write((char*)&compsize,sizeof(int32_t));
 		f.write(out_buffer,c_stream.total_out);
 		}
 
@@ -270,7 +273,7 @@ char file_compressorst::load_new_in_buffer()
 	in_buffer_amount_loaded=0;
 
 	//LOAD THE BLOCK OF COMPRESSED DATA
-	f.read((char*)&out_buffer_amount_written,sizeof(long));
+	f.read((char*)&out_buffer_amount_written,sizeof(int32_t));
 	out_buffer_amount_written=byteswap(out_buffer_amount_written);
 	f.read(out_buffer,out_buffer_amount_written);
 

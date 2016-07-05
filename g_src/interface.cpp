@@ -1130,9 +1130,9 @@ int interfacest::write_movie_chunk()
 					cmh.delayrate=byteswap(cmh.delayrate);
 				f.write((const char *)&cmh,sizeof(cursesmovie_headerst));
 
-				int s;
-				s=byteswap(gview.supermovie_sound.str.size());
-				f.write((const char *)&s,sizeof(int));
+				int32_t s=gview.supermovie_sound.str.size();
+				s=byteswap(s);
+				f.write((const char *)&s,sizeof(int32_t));
 				char buf[50];
 				for(s=0;s<gview.supermovie_sound.str.size();s++)
 					{

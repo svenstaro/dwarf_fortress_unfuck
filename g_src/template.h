@@ -274,7 +274,7 @@ template <class T> void push_on_vector(T &master,T &new_stuff)
 
 template<class T> VIndex add_to_global_id_vector(T ptr,svector<T> &vect)
 {
-	int32_t size=vect.size();
+	int32_t size=(int32_t)vect.size();
 	if(size==0)
 		{
 		vect.push_back(ptr);
@@ -527,7 +527,7 @@ template<class T> VIndex add_to_binary_vector(T ptr,svector<T> &vect)
 //NOTE: RETURNS -1 IF ALREADY PRESENT, NOT THE INDEX
 template<class T> VIndex add_unique_to_binary_vector(T ptr,svector<T> &vect)
 {
-	int32_t size=vect.size();
+	int32_t size=(int32_t)vect.size();
 	if(size==0)
 		{
 		vect.push_back(ptr);
@@ -611,7 +611,7 @@ template<class T> VIndex add_unique_to_binary_vector_always_index(T ptr,svector<
 {
 	was_present=false;
 
-	int32_t size=vect.size();
+	int32_t size=(int32_t)vect.size();
 	if(size==0)
 		{
 		vect.push_back(ptr);
@@ -717,7 +717,7 @@ template<class T> void remove_from_binary_vector(T ptr,svector<T> &vect)
 
 template<class T> int32_t get_index_from_binary_vector(T id,svector<T> &vect)
 {
-	int32_t size=vect.size();
+	int32_t size=(int32_t)vect.size();
 	if(size==0||id==-1)return -1;
 
 	int32_t start=0;
@@ -744,7 +744,7 @@ template<class T> int32_t get_index_from_binary_vector(T id,svector<T> &vect)
 
 template<class T> int32_t get_floor_index_from_binary_vector(T ptr,svector<T> &vect)
 {
-	int32_t size=vect.size();
+	int32_t size=(int32_t)vect.size();
 	if(size==0)return -1;
 	if(vect[size-1]<ptr)return size-1;
 
@@ -979,7 +979,7 @@ template<class T> void add_unique_to_fixed_binary_array(T ptr,T *vect,int32_t &s
 
 template<class T> void add_to_local_id_vector(T ptr,svector<T> &vect)
 {
-	int32_t size=vect.size();
+	int32_t size=(int32_t)vect.size();
 	if(size==0)
 		{
 		vect.push_back(ptr);

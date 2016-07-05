@@ -174,7 +174,7 @@ string encode_utf8(int unicode) {
   }
 
   // Build up the string, right to left
-  for (i = s.length()-1; i > 0; i--) {
+  for (i = (int)s.length()-1; i > 0; i--) {
     s[i] = 0x80 | (unicode & 0x3f);
     unicode >>= 6;
   }

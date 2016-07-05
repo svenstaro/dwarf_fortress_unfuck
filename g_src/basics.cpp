@@ -20,13 +20,16 @@ using std::ofstream;
 
 #include "endian.h"
 
-#ifdef WIN32
-
 #ifndef INTEGER_TYPES
-	#define INTEGER_TYPES
+
+#define INTEGER_TYPES
+
+#ifdef WIN32
+	typedef signed char int8_t;
 	typedef short int16_t;
 	typedef int int32_t;
 	typedef long long int64_t;
+	typedef unsigned char uint8_t;
 	typedef unsigned short uint16_t;
 	typedef unsigned int uint32_t;
 	typedef unsigned long long uint64_t;
@@ -237,7 +240,7 @@ bool grab_token_string_pos(string &dest,string &source,int32_t pos,char compc)
 bool grab_token_string(string &dest,const char *source,char compc)
 {
 	dest.erase();
-	int32_t sz=strlen(source);
+	int32_t sz=(int32_t)strlen(source);
 	if(sz==0)return false;
 
 	//GO UNTIL YOU HIT A :, ], or the end
@@ -547,7 +550,7 @@ void abbreviate_string(string &str, int32_t len)
   if (ttf_manager.ttf_active()) {
     // We'll need to use TTF-aware text shrinking.
     while (ttf_manager.size_text(str) > len)
-      abbreviate_string_helper(str, str.length() - 1);
+      abbreviate_string_helper(str, (int32_t)str.length() - 1);
   } else if(str.length()>len){
     // 1 letter = 1 tile.
     abbreviate_string_helper(str, len);
