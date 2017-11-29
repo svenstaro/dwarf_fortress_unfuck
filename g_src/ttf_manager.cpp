@@ -130,7 +130,7 @@ ttf_details ttf_managerst::get_handle(const list<ttf_id> &text, justification ju
   if (just == justify_center && text_width % 2)
     offset += 0.5; // Arbitrary fixup for approximate grid centering
   double fraction, integral;
-  fraction = std::modf(offset, &integral);
+  fraction = modf(offset, &integral);
   // Outputs:
   const int grid_offset = int(integral + 0.001); // Tiles to move to the right in addst
   const int pixel_offset = int(fraction * tile_width); // Black columns to add to the left of the image

@@ -75,6 +75,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_CHOOSE_NAME_RANDOM, "CHOOSE_NAME_RANDOM");
 	bindingNames.insert(INTERFACEKEY_CHOOSE_NAME_CLEAR, "CHOOSE_NAME_CLEAR");
 	bindingNames.insert(INTERFACEKEY_CHOOSE_NAME_TYPE, "CHOOSE_NAME_TYPE");
+	bindingNames.insert(INTERFACEKEY_CHOOSE_NAME_FIRST, "CHOOSE_NAME_FIRST");
 	bindingNames.insert(INTERFACEKEY_ITEM_DESCRIPTION, "ITEM_DESCRIPTION");
 	bindingNames.insert(INTERFACEKEY_ITEM_FORBID, "ITEM_FORBID");
 	bindingNames.insert(INTERFACEKEY_ITEM_MELT, "ITEM_MELT");
@@ -182,6 +183,17 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_IMAGE_CREATOR_FILTER, "IMAGE_CREATOR_FILTER");
 	bindingNames.insert(INTERFACEKEY_IMAGE_CREATOR_NAME, "IMAGE_CREATOR_NAME");
 	bindingNames.insert(INTERFACEKEY_IMAGE_CREATOR_DONE, "IMAGE_CREATOR_DONE");
+	bindingNames.insert(INTERFACEKEY_CIV_RAID, "CIV_RAID");
+	bindingNames.insert(INTERFACEKEY_CIV_CENTER_ON_FORT, "CIV_CENTER_ON_FORT");
+	bindingNames.insert(INTERFACEKEY_CIV_REMOVE_MISSION, "CIV_REMOVE_MISSION");
+	bindingNames.insert(INTERFACEKEY_CIV_RESCUE, "CIV_RESCUE");
+	bindingNames.insert(INTERFACEKEY_CIV_RECOVER, "CIV_RECOVER");
+	bindingNames.insert(INTERFACEKEY_CIV_WORLD, "CIV_WORLD");
+	bindingNames.insert(INTERFACEKEY_CIV_MISSIONS, "CIV_MISSIONS");
+	bindingNames.insert(INTERFACEKEY_CIV_NEWS, "CIV_NEWS");
+	bindingNames.insert(INTERFACEKEY_CIV_PEOPLE, "CIV_PEOPLE");
+	bindingNames.insert(INTERFACEKEY_CIV_ARTIFACTS, "CIV_ARTIFACTS");
+	bindingNames.insert(INTERFACEKEY_CIV_CIVS, "CIV_CIVS");
 	bindingNames.insert(INTERFACEKEY_A_CLEAR_ANNOUNCEMENTS, "A_CLEAR_ANNOUNCEMENTS");
 	bindingNames.insert(INTERFACEKEY_A_SLEEP, "A_SLEEP");
 	bindingNames.insert(INTERFACEKEY_A_SLEEP_SLEEP, "A_SLEEP_SLEEP");
@@ -208,6 +220,12 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_A_JUMP,"A_JUMP");
 	bindingNames.insert(INTERFACEKEY_A_HOLD,"A_HOLD");
 	bindingNames.insert(INTERFACEKEY_A_TALK, "A_TALK");
+	bindingNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_NEW, "A_ASSUME_IDENTITY_NEW");
+	bindingNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_NONE, "A_ASSUME_IDENTITY_NONE");
+	bindingNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_NAME, "A_ASSUME_IDENTITY_NAME");
+	bindingNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_ORIGIN, "A_ASSUME_IDENTITY_ORIGIN");
+	bindingNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_PROFESSION, "A_ASSUME_IDENTITY_PROFESSION");
+	bindingNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_WORSHIP, "A_ASSUME_IDENTITY_WORSHIP");
 	bindingNames.insert(INTERFACEKEY_A_INTERACT, "A_INTERACT");
 	bindingNames.insert(INTERFACEKEY_A_ACTION, "A_ACTION");
 	bindingNames.insert(INTERFACEKEY_A_ACTION_CREATE, "A_ACTION_CREATE");
@@ -405,6 +423,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_HOTKEY_BUILDING_NEST_BOX, "HOTKEY_BUILDING_NEST_BOX");
 	bindingNames.insert(INTERFACEKEY_HOTKEY_BUILDING_BOOKCASE, "HOTKEY_BUILDING_BOOKCASE");
 	bindingNames.insert(INTERFACEKEY_HOTKEY_BUILDING_HIVE, "HOTKEY_BUILDING_HIVE");
+	bindingNames.insert(INTERFACEKEY_HOTKEY_BUILDING_DISPLAY_FURNITURE, "HOTKEY_BUILDING_DISPLAY_FURNITURE");
 	bindingNames.insert(INTERFACEKEY_HOTKEY_BUILDING_CHAIR, "HOTKEY_BUILDING_CHAIR");
 	bindingNames.insert(INTERFACEKEY_HOTKEY_BUILDING_COFFIN, "HOTKEY_BUILDING_COFFIN");
 	bindingNames.insert(INTERFACEKEY_HOTKEY_BUILDING_DOOR, "HOTKEY_BUILDING_DOOR");
@@ -721,6 +740,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_A_LOG_AGREEMENTS, "A_LOG_AGREEMENTS");
 	bindingNames.insert(INTERFACEKEY_A_LOG_EVENTS, "A_LOG_EVENTS");
 	bindingNames.insert(INTERFACEKEY_A_LOG_BESTIARY, "A_LOG_BESTIARY");
+	bindingNames.insert(INTERFACEKEY_A_LOG_ARTIFACTS, "A_LOG_ARTIFACTS");
 	bindingNames.insert(INTERFACEKEY_A_LOG_FILTER, "A_LOG_FILTER");
 	bindingNames.insert(INTERFACEKEY_A_LOG_ZOOM_CURRENT_LOCATION, "A_LOG_ZOOM_CURRENT_LOCATION");
 	bindingNames.insert(INTERFACEKEY_A_LOG_ZOOM_SELECTED, "A_LOG_ZOOM_SELECTED");
@@ -967,6 +987,8 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_RACKSTAND_KILL1, "BUILDJOB_RACKSTAND_KILL1");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_RACKSTAND_DEFAULTS2, "BUILDJOB_RACKSTAND_DEFAULTS2");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_RACKSTAND_KILL2, "BUILDJOB_RACKSTAND_KILL2");
+	bindingNames.insert(INTERFACEKEY_BUILDJOB_DISPLAY_FURNITURE_SET, "BUILDJOB_DISPLAY_FURNITURE_SET");
+	bindingNames.insert(INTERFACEKEY_BUILDJOB_DISPLAY_FURNITURE_CANCEL, "BUILDJOB_DISPLAY_FURNITURE_CANCEL");
 	bindingNames.insert(INTERFACEKEY_STOCKPILE_SETTINGS_ENABLE, "STOCKPILE_SETTINGS_ENABLE");
 	bindingNames.insert(INTERFACEKEY_STOCKPILE_SETTINGS_DISABLE, "STOCKPILE_SETTINGS_DISABLE");
 	bindingNames.insert(INTERFACEKEY_STOCKPILE_SETTINGS_PERMIT_ALL, "STOCKPILE_SETTINGS_PERMIT_ALL");
@@ -992,6 +1014,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_A_BARTER_CURRENCY_1, "A_BARTER_CURRENCY_1");
 	bindingNames.insert(INTERFACEKEY_A_BARTER_CURRENCY_2, "A_BARTER_CURRENCY_2");
 	bindingNames.insert(INTERFACEKEY_A_BARTER_TRADE, "A_BARTER_TRADE");
+	bindingNames.insert(INTERFACEKEY_A_BARTER_SHOW, "A_BARTER_SHOW");
 	bindingNames.insert(INTERFACEKEY_TRADE_VIEW, "TRADE_VIEW");
 	bindingNames.insert(INTERFACEKEY_TRADE_TRADE, "TRADE_TRADE");
 	bindingNames.insert(INTERFACEKEY_TRADE_OFFER, "TRADE_OFFER");
@@ -1623,6 +1646,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_CHOOSE_NAME_RANDOM, "Choose name: Random");
 	displayNames.insert(INTERFACEKEY_CHOOSE_NAME_CLEAR, "Choose name: Clear");
 	displayNames.insert(INTERFACEKEY_CHOOSE_NAME_TYPE, "Choose name: Type");
+	displayNames.insert(INTERFACEKEY_CHOOSE_NAME_FIRST, "Choose name: First");
 	displayNames.insert(INTERFACEKEY_ITEM_DESCRIPTION, "View item: Description");
 	displayNames.insert(INTERFACEKEY_ITEM_FORBID, "View item: Forbid");
 	displayNames.insert(INTERFACEKEY_ITEM_MELT, "View item: Melt");
@@ -1730,6 +1754,17 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_IMAGE_CREATOR_FILTER, "Image Creator: Filter");
 	displayNames.insert(INTERFACEKEY_IMAGE_CREATOR_NAME, "Image Creator: Name");
 	displayNames.insert(INTERFACEKEY_IMAGE_CREATOR_DONE, "Image Creator: Done");
+	displayNames.insert(INTERFACEKEY_CIV_RAID, "World: Raid");
+	displayNames.insert(INTERFACEKEY_CIV_CENTER_ON_FORT, "World: Center on Fort");
+	displayNames.insert(INTERFACEKEY_CIV_REMOVE_MISSION, "World: Remove Mission");
+	displayNames.insert(INTERFACEKEY_CIV_RESCUE, "World: Rescue Person");
+	displayNames.insert(INTERFACEKEY_CIV_RECOVER, "World: Recover Artifact");
+	displayNames.insert(INTERFACEKEY_CIV_WORLD, "World: World Map");
+	displayNames.insert(INTERFACEKEY_CIV_MISSIONS, "World: Missions");
+	displayNames.insert(INTERFACEKEY_CIV_NEWS, "World: News and Rumors");
+	displayNames.insert(INTERFACEKEY_CIV_PEOPLE, "World: People");
+	displayNames.insert(INTERFACEKEY_CIV_ARTIFACTS, "World: Artifacts");
+	displayNames.insert(INTERFACEKEY_CIV_CIVS, "World: Civilizations");
 	displayNames.insert(INTERFACEKEY_A_CLEAR_ANNOUNCEMENTS, "Adventure: Clear announcements");
 	displayNames.insert(INTERFACEKEY_A_SLEEP, "Adventure: Sleep");
 	displayNames.insert(INTERFACEKEY_A_SLEEP_SLEEP, "Adventure: Sleep, Sleep");
@@ -1756,6 +1791,12 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_A_JUMP,"Adventure: Jump");
 	displayNames.insert(INTERFACEKEY_A_HOLD,"Adventure: Hold/Hang (Climb)");
 	displayNames.insert(INTERFACEKEY_A_TALK, "Adventure: Talk");
+	displayNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_NEW, "Adventure: Assume Identity, New");
+	displayNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_NONE, "Adventure: Assume Identity, None");
+	displayNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_NAME, "Adventure: Assume Identity, Name");
+	displayNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_ORIGIN, "Adventure: Assume Identity, Origin");
+	displayNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_PROFESSION, "Adventure: Assume Identity, Profession");
+	displayNames.insert(INTERFACEKEY_A_ASSUME_IDENTITY_WORSHIP, "Adventure: Assume Identity, Worship");
 	displayNames.insert(INTERFACEKEY_A_INTERACT, "Adventure: Inv. Interact");
 	displayNames.insert(INTERFACEKEY_A_ACTION, "Adventure: Misc. Action");
 	displayNames.insert(INTERFACEKEY_A_ACTION_CREATE, "Adventure: Misc. Action, Create");
@@ -1953,6 +1994,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_HOTKEY_BUILDING_NEST_BOX, "Hotkey: Building, Nest Box");
 	displayNames.insert(INTERFACEKEY_HOTKEY_BUILDING_BOOKCASE, "Hotkey: Building, Bookcase");
 	displayNames.insert(INTERFACEKEY_HOTKEY_BUILDING_HIVE, "Hotkey: Building, Hive");
+	displayNames.insert(INTERFACEKEY_HOTKEY_BUILDING_DISPLAY_FURNITURE, "Hotkey: Building, Display Furniture");
 	displayNames.insert(INTERFACEKEY_HOTKEY_BUILDING_CHAIR, "Hotkey: Building, Chair");
 	displayNames.insert(INTERFACEKEY_HOTKEY_BUILDING_COFFIN, "Hotkey: Building, Coffin");
 	displayNames.insert(INTERFACEKEY_HOTKEY_BUILDING_DOOR, "Hotkey: Building, Door");
@@ -2269,6 +2311,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_A_LOG_AGREEMENTS, "Adventure: Log, Agreements");
 	displayNames.insert(INTERFACEKEY_A_LOG_EVENTS, "Adventure: Log, Events");
 	displayNames.insert(INTERFACEKEY_A_LOG_BESTIARY, "Adventure: Log, Bestiary");
+	displayNames.insert(INTERFACEKEY_A_LOG_ARTIFACTS, "Adventure: Log, Artifacts");
 	displayNames.insert(INTERFACEKEY_A_LOG_FILTER, "Adventure: Log, Filter");
 	displayNames.insert(INTERFACEKEY_A_LOG_ZOOM_CURRENT_LOCATION, "Adventure: Log, Zoom to Current Location");
 	displayNames.insert(INTERFACEKEY_A_LOG_ZOOM_SELECTED, "Adventure: Log, Zoom to Selected");
@@ -2515,6 +2558,8 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_BUILDJOB_RACKSTAND_KILL1, "Buildjob: Rackstand, No Items");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_RACKSTAND_DEFAULTS2, "Buildjob: Rackstand, All Mats");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_RACKSTAND_KILL2, "Buildjob: Rackstand, No Mats");
+	displayNames.insert(INTERFACEKEY_BUILDJOB_DISPLAY_FURNITURE_SET, "Buildjob: Display Furniture, Set");
+	displayNames.insert(INTERFACEKEY_BUILDJOB_DISPLAY_FURNITURE_CANCEL, "Buildjob: Display Furniture, Cancel");
 	displayNames.insert(INTERFACEKEY_STOCKPILE_SETTINGS_ENABLE, "Stockpile Settings: Enable");
 	displayNames.insert(INTERFACEKEY_STOCKPILE_SETTINGS_DISABLE, "Stockpile Settings: Disable");
 	displayNames.insert(INTERFACEKEY_STOCKPILE_SETTINGS_PERMIT_ALL, "Stockpile Settings: Permit All");
@@ -2540,6 +2585,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_A_BARTER_CURRENCY_1, "Adventure: Barter, Currency 1");
 	displayNames.insert(INTERFACEKEY_A_BARTER_CURRENCY_2, "Adventure: Barter, Currency 2");
 	displayNames.insert(INTERFACEKEY_A_BARTER_TRADE, "Adventure: Barter, Trade");
+	displayNames.insert(INTERFACEKEY_A_BARTER_SHOW, "Adventure: Barter, Show");
 	displayNames.insert(INTERFACEKEY_TRADE_VIEW, "Trade, View");
 	displayNames.insert(INTERFACEKEY_TRADE_TRADE, "Trade, Trade");
 	displayNames.insert(INTERFACEKEY_TRADE_OFFER, "Trade, Offer");
