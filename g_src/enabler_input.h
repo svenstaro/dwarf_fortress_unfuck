@@ -102,7 +102,7 @@ class enabler_inputst {
   void load_keybindings(const std::string &file);
   void save_keybindings(const std::string &file);
   void save_keybindings();
-  std::string GetKeyDisplay(int binding);
+  virtual std::string GetKeyDisplay(int binding);
   std::string GetBindingDisplay(int binding);
   std::string GetBindingTextDisplay(int binding);
 
