@@ -702,6 +702,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_D_BITEM_DUMP, "D_BITEM_DUMP");
 	bindingNames.insert(INTERFACEKEY_D_BITEM_HIDE, "D_BITEM_HIDE");
 	bindingNames.insert(INTERFACEKEY_D_BITEM_MELT, "D_BITEM_MELT");
+	bindingNames.insert(INTERFACEKEY_D_BITEM_NAME, "D_BITEM_NAME");
 	bindingNames.insert(INTERFACEKEY_D_LOOK_FORBID, "D_LOOK_FORBID");
 	bindingNames.insert(INTERFACEKEY_D_LOOK_DUMP, "D_LOOK_DUMP");
 	bindingNames.insert(INTERFACEKEY_D_LOOK_MELT, "D_LOOK_MELT");
@@ -742,7 +743,8 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_A_TRAVEL_CLOUDS, "A_TRAVEL_CLOUDS");
 	bindingNames.insert(INTERFACEKEY_A_LOG, "A_LOG");
 	bindingNames.insert(INTERFACEKEY_A_TRAVEL_LOG, "A_TRAVEL_LOG");
-	bindingNames.insert(INTERFACEKEY_A_LOG_TASKS, "A_LOG_TASKS");
+	bindingNames.insert(INTERFACEKEY_A_LOG_SORT, "A_LOG_SORT");
+	bindingNames.insert(INTERFACEKEY_A_LOG_PIN, "A_LOG_PIN");
 	bindingNames.insert(INTERFACEKEY_A_LOG_ENTITIES, "A_LOG_ENTITIES");
 	bindingNames.insert(INTERFACEKEY_A_LOG_SITES, "A_LOG_SITES");
 	bindingNames.insert(INTERFACEKEY_A_LOG_SUBREGIONS, "A_LOG_SUBREGIONS");
@@ -886,6 +888,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_HOTKEY_TRAP_TRACK_STOP, "HOTKEY_TRAP_TRACK_STOP");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_ADD, "BUILDJOB_ADD");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_CANCEL, "BUILDJOB_CANCEL");
+	bindingNames.insert(INTERFACEKEY_BUILDJOB_NAME, "BUILDJOB_NAME");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_PROMOTE, "BUILDJOB_PROMOTE");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_NOW, "BUILDJOB_NOW");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_REPEAT, "BUILDJOB_REPEAT");
@@ -939,7 +942,6 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_BED_DORMITORY, "BUILDJOB_BED_DORMITORY");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_BED_RENT, "BUILDJOB_BED_RENT");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_BED_SIZE, "BUILDJOB_BED_SIZE");
-	bindingNames.insert(INTERFACEKEY_BUILDJOB_BED_NAME, "BUILDJOB_BED_NAME");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_BED_SLEEP, "BUILDJOB_BED_SLEEP");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_BED_TRAIN, "BUILDJOB_BED_TRAIN");
 	bindingNames.insert(INTERFACEKEY_BUILDJOB_BED_INDIV_EQ, "BUILDJOB_BED_INDIV_EQ");
@@ -1041,6 +1043,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_MILITARY_WEAPON, "MILITARY_WEAPON");
 	bindingNames.insert(INTERFACEKEY_MILITARY_ZOOM, "MILITARY_ZOOM");
 	bindingNames.insert(INTERFACEKEY_ANNOUNCE_ZOOM, "ANNOUNCE_ZOOM");
+	bindingNames.insert(INTERFACEKEY_ANNOUNCE_ZOOM_2, "ANNOUNCE_ZOOM_2");
 	bindingNames.insert(INTERFACEKEY_UNITJOB_REMOVE_CRE, "UNITJOB_REMOVE_CRE");
 	bindingNames.insert(INTERFACEKEY_UNITJOB_ZOOM_CRE, "UNITJOB_ZOOM_CRE");
 	bindingNames.insert(INTERFACEKEY_UNITJOB_ZOOM_BUILD, "UNITJOB_ZOOM_BUILD");
@@ -1079,6 +1082,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_SETUPGAME_SAVE_PROFILE_ABORT, "SETUPGAME_SAVE_PROFILE_ABORT");
 	bindingNames.insert(INTERFACEKEY_SETUPGAME_SAVE_PROFILE_GO, "SETUPGAME_SAVE_PROFILE_GO");
 	bindingNames.insert(INTERFACEKEY_SETUPGAME_VIEW_PROFILE_PROBLEMS, "SETUPGAME_VIEW_PROFILE_PROBLEMS");
+	bindingNames.insert(INTERFACEKEY_CIVZONE_NAME, "CIVZONE_NAME");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_REMOVE, "CIVZONE_REMOVE");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_REMOVE_ZONE, "CIVZONE_REMOVE_ZONE");
 	bindingNames.insert(INTERFACEKEY_CIVZONE_SHAPE, "CIVZONE_SHAPE");
@@ -2284,6 +2288,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_D_BITEM_DUMP, "Building Items: Dump");
 	displayNames.insert(INTERFACEKEY_D_BITEM_MELT, "Building Items: Melt");
 	displayNames.insert(INTERFACEKEY_D_BITEM_HIDE, "Building Items: Hide");
+	displayNames.insert(INTERFACEKEY_D_BITEM_NAME, "Building Items: Name");
 	displayNames.insert(INTERFACEKEY_D_LOOK_FORBID, "Dwf Look: Forbid");
 	displayNames.insert(INTERFACEKEY_D_LOOK_DUMP, "Dwf Look: Dump");
 	displayNames.insert(INTERFACEKEY_D_LOOK_MELT, "Dwf Look: Melt");
@@ -2324,7 +2329,8 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_A_TRAVEL_CLOUDS, "Adventure: Travel, Clouds");
 	displayNames.insert(INTERFACEKEY_A_LOG, "Adventure: Log");
 	displayNames.insert(INTERFACEKEY_A_TRAVEL_LOG, "Adventure: Travel, Log");
-	displayNames.insert(INTERFACEKEY_A_LOG_TASKS, "Adventure: Log, Tasks");
+	displayNames.insert(INTERFACEKEY_A_LOG_SORT, "Adventure: Log, Sort");
+	displayNames.insert(INTERFACEKEY_A_LOG_PIN, "Adventure: Log, Pin");
 	displayNames.insert(INTERFACEKEY_A_LOG_ENTITIES, "Adventure: Log, Entities");
 	displayNames.insert(INTERFACEKEY_A_LOG_SITES, "Adventure: Log, Sites");
 	displayNames.insert(INTERFACEKEY_A_LOG_SUBREGIONS, "Adventure: Log, Regions");
@@ -2468,6 +2474,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_HOTKEY_TRAP_TRACK_STOP, "Hotkey: Trap, Track Stop");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_ADD, "Buildjob: Add");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_CANCEL, "Buildjob: Cancel");
+	displayNames.insert(INTERFACEKEY_BUILDJOB_NAME, "Buildjob: Name");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_PROMOTE, "Buildjob: Promote");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_NOW, "Buildjob: Now");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_REPEAT, "Buildjob: Repeat");
@@ -2521,7 +2528,6 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_BUILDJOB_BED_DORMITORY, "Buildjob: Bed, Dormitory");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_BED_RENT, "Buildjob: Bed, Rent");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_BED_SIZE, "Buildjob: Bed, Size");
-	displayNames.insert(INTERFACEKEY_BUILDJOB_BED_NAME, "Buildjob: Bed, Name");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_BED_SLEEP, "Buildjob: Bed, Sleep");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_BED_TRAIN, "Buildjob: Bed, Train");
 	displayNames.insert(INTERFACEKEY_BUILDJOB_BED_INDIV_EQ, "Buildjob: Bed, Indiv Eq");
@@ -2623,6 +2629,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_MILITARY_WEAPON, "Military, Weapon");
 	displayNames.insert(INTERFACEKEY_MILITARY_ZOOM, "Military, Zoom");
 	displayNames.insert(INTERFACEKEY_ANNOUNCE_ZOOM, "Announcements, Zoom");
+	displayNames.insert(INTERFACEKEY_ANNOUNCE_ZOOM_2, "Announcements, Zoom 2");
 	displayNames.insert(INTERFACEKEY_UNITJOB_REMOVE_CRE, "Unitjob, Remove Unit");
 	displayNames.insert(INTERFACEKEY_UNITJOB_ZOOM_CRE, "Unitjob, Zoom Unit");
 	displayNames.insert(INTERFACEKEY_UNITJOB_ZOOM_BUILD, "Unitjob, Zoom Building");
@@ -2661,6 +2668,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_SETUPGAME_SAVE_PROFILE_ABORT, "Setup, Save Profile, Abort");
 	displayNames.insert(INTERFACEKEY_SETUPGAME_SAVE_PROFILE_GO, "Setup, Save Profile, Go");
 	displayNames.insert(INTERFACEKEY_SETUPGAME_VIEW_PROFILE_PROBLEMS, "Setup, View Profile Problems");
+	displayNames.insert(INTERFACEKEY_CIVZONE_NAME, "Main: Activity Zone, Name");
 	displayNames.insert(INTERFACEKEY_CIVZONE_REMOVE, "Main: Activity Zone, Remove");
 	displayNames.insert(INTERFACEKEY_CIVZONE_REMOVE_ZONE, "Main: Activity Zone, Remove Zone");
 	displayNames.insert(INTERFACEKEY_CIVZONE_SHAPE, "Main: Activity Zone, Shape");
