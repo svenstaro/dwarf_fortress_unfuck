@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(graphics)
 
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
 
 add_definitions(-Dunix -Dlinux -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0)
 

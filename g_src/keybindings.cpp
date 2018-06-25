@@ -185,6 +185,8 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_IMAGE_CREATOR_DONE, "IMAGE_CREATOR_DONE");
 	bindingNames.insert(INTERFACEKEY_CIV_RAID, "CIV_RAID");
 	bindingNames.insert(INTERFACEKEY_CIV_CENTER_ON_FORT, "CIV_CENTER_ON_FORT");
+	bindingNames.insert(INTERFACEKEY_CIV_HOLDINGS, "CIV_HOLDINGS");
+	bindingNames.insert(INTERFACEKEY_CIV_MAP_LEGEND, "CIV_MAP_LEGEND");
 	bindingNames.insert(INTERFACEKEY_CIV_REMOVE_MISSION, "CIV_REMOVE_MISSION");
 	bindingNames.insert(INTERFACEKEY_CIV_RESCUE, "CIV_RESCUE");
 	bindingNames.insert(INTERFACEKEY_CIV_RECOVER, "CIV_RECOVER");
@@ -201,6 +203,8 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_CIV_MISSION_RAZE, "CIV_MISSION_RAZE");
 	bindingNames.insert(INTERFACEKEY_CIV_MISSION_TRIBUTE_ONE_TIME, "CIV_MISSION_TRIBUTE_ONE_TIME");
 	bindingNames.insert(INTERFACEKEY_CIV_MISSION_TRIBUTE_ONGOING, "CIV_MISSION_TRIBUTE_ONGOING");
+	bindingNames.insert(INTERFACEKEY_CIV_MISSION_CONQUER, "CIV_MISSION_CONQUER");
+	bindingNames.insert(INTERFACEKEY_CIV_MISSION_DEMAND_SURRENDER, "CIV_MISSION_DEMAND_SURRENDER");
 	bindingNames.insert(INTERFACEKEY_CIV_NEWS, "CIV_NEWS");
 	bindingNames.insert(INTERFACEKEY_CIV_PEOPLE, "CIV_PEOPLE");
 	bindingNames.insert(INTERFACEKEY_CIV_ARTIFACTS, "CIV_ARTIFACTS");
@@ -1221,6 +1225,7 @@ void keybinding_init() {
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_GEN_MISC, "UNITVIEW_GEN_MISC");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_PRF_PROF, "UNITVIEW_PRF_PROF");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_PRF_PET, "UNITVIEW_PRF_PET");
+	bindingNames.insert(INTERFACEKEY_UNITVIEW_PRF_EXPEL, "UNITVIEW_PRF_EXPEL");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_PRF_VIEW, "UNITVIEW_PRF_VIEW");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_PRF_NEW_SQUAD, "UNITVIEW_PRF_NEW_SQUAD");
 	bindingNames.insert(INTERFACEKEY_UNITVIEW_PRF_REMOVE_FROM_SQUAD, "UNITVIEW_PRF_REMOVE_FROM_SQUAD");
@@ -1771,6 +1776,8 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_IMAGE_CREATOR_DONE, "Image Creator: Done");
 	displayNames.insert(INTERFACEKEY_CIV_RAID, "World: Raid");
 	displayNames.insert(INTERFACEKEY_CIV_CENTER_ON_FORT, "World: Center on Fort");
+	displayNames.insert(INTERFACEKEY_CIV_HOLDINGS, "World: Holdings");
+	displayNames.insert(INTERFACEKEY_CIV_MAP_LEGEND, "World: Map Legend");
 	displayNames.insert(INTERFACEKEY_CIV_REMOVE_MISSION, "World: Remove Mission");
 	displayNames.insert(INTERFACEKEY_CIV_RESCUE, "World: Rescue Person");
 	displayNames.insert(INTERFACEKEY_CIV_RECOVER, "World: Recover Artifact");
@@ -1787,6 +1794,8 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_CIV_MISSION_RAZE, "World: Missions, Details, Raze");
 	displayNames.insert(INTERFACEKEY_CIV_MISSION_TRIBUTE_ONE_TIME, "World: Missions, Details, One-Time Tribute");
 	displayNames.insert(INTERFACEKEY_CIV_MISSION_TRIBUTE_ONGOING, "World: Missions, Details, Ongoing Tribute");
+	displayNames.insert(INTERFACEKEY_CIV_MISSION_CONQUER, "World: Missions, Details, Conquer");
+	displayNames.insert(INTERFACEKEY_CIV_MISSION_DEMAND_SURRENDER, "World: Missions, Details, Demand Surrender");
 	displayNames.insert(INTERFACEKEY_CIV_NEWS, "World: News and Rumors");
 	displayNames.insert(INTERFACEKEY_CIV_PEOPLE, "World: People");
 	displayNames.insert(INTERFACEKEY_CIV_ARTIFACTS, "World: Artifacts");
@@ -2807,6 +2816,7 @@ void keybinding_init() {
 	displayNames.insert(INTERFACEKEY_UNITVIEW_GEN_MISC, "Unitview, General, Misc");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_PRF_PROF, "Unitview, Prefs, Labor");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_PRF_PET, "Unitview, Prefs, Pets");
+	displayNames.insert(INTERFACEKEY_UNITVIEW_PRF_EXPEL, "Unitview, Prefs, Expel");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_PRF_VIEW, "Unitview, Prefs, Profile");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_PRF_NEW_SQUAD, "Unitview, Prefs, New Squad");
 	displayNames.insert(INTERFACEKEY_UNITVIEW_PRF_REMOVE_FROM_SQUAD, "Unitview, Prefs, Remove From Squad");
