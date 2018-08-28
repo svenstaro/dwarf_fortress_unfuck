@@ -16,8 +16,6 @@ dev packages installed.
 
 ### Arch Linux
 
-Have [multilib] enabled in pacman.conf. And then run:
-
 ```pacman -S base-devel {sdl,sdl_image,sdl_ttf,openal,pango,atk,gdk-pixbuf2,gtk2,ncurses,glew,zlib}```
 
 ### Fedora 20
