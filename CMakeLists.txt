@@ -16,7 +16,7 @@ find_package(Freetype REQUIRED)
 find_package(Threads REQUIRED)
 find_package(X11 REQUIRED)
 find_package(ZLIB REQUIRED)
-pkg_check_modules(GTK3 gtk+-3.0)
+pkg_search_module(GTK REQUIRED gtk+-3.0 gtk+-2.0)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)
@@ -54,7 +54,7 @@ include_directories(
     ${X11_INCLUDE_DIR}
     ${CURSES_INCLUDE_DIR}
     ${ZLIB_INCLUDE_DIR}
-    ${GTK3_INCLUDE_DIRS}
+    ${GTK_INCLUDE_DIRS}
 )
 
 add_library(graphics SHARED ${SOURCES})
@@ -70,5 +70,5 @@ target_link_libraries(graphics
     ${X11_LIBRARIES}
     ${CURSES_LIBRARIES}
     ${ZLIB_LIBRARIES}
-    ${GTK3_LIBRARIES}
+    ${GTK_LIBRARIES}
 )
