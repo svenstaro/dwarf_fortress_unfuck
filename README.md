@@ -11,7 +11,7 @@ the code a little bit.
 
 ## Build Dependencies
 
-To build the graphics library you must have the required 32 bit libraries and
+To build the graphics library you must have the required libraries and
 dev packages installed.
 
 ### Arch Linux
