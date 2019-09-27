@@ -9,7 +9,6 @@ find_package(OpenGL REQUIRED)
 find_package(SDL REQUIRED)
 find_package(SDL_image REQUIRED)
 find_package(SDL_ttf REQUIRED)
-find_package(GTK2 REQUIRED gtk)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(OpenAL REQUIRED)
@@ -17,7 +16,7 @@ find_package(Freetype REQUIRED)
 find_package(Threads REQUIRED)
 find_package(X11 REQUIRED)
 find_package(ZLIB REQUIRED)
-find_package(harfbuzz REQUIRED)
+pkg_check_modules(GTK3 gtk+-3.0)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)
@@ -50,12 +49,12 @@ include_directories(
     ${SDL_TTF_INCLUDE_DIRS}
     ${SDL_IMAGE_INCLUDE_DIRS}
     ${OPENAL_INCLUDE_DIR}
-    ${GTK2_INCLUDE_DIRS}
     ${GLEW_INCLUDE_DIRS}
     ${FREETYPE_INCLUDE_DIRS}
     ${X11_INCLUDE_DIR}
     ${CURSES_INCLUDE_DIR}
     ${ZLIB_INCLUDE_DIR}
+    ${GTK3_INCLUDE_DIRS}
 )
 
 add_library(graphics SHARED ${SOURCES})
@@ -71,5 +70,5 @@ target_link_libraries(graphics
     ${X11_LIBRARIES}
     ${CURSES_LIBRARIES}
     ${ZLIB_LIBRARIES}
-    harfbuzz::harfbuzz
+    ${GTK3_LIBRARIES}
 )
