@@ -16,11 +16,11 @@ dev packages installed.
 
 ### Arch Linux
 
-```pacman -S base-devel {sdl,sdl_image,sdl_ttf,openal,pango,atk,gdk-pixbuf2,gtk2,ncurses,glew,zlib}```
+```pacman -S base-devel {sdl,sdl_image,sdl_ttf,openal,pango,atk,gtk3,ncurses,glew,zlib}```
 
 ### Fedora 20
 
-```yum install gcc gcc-c++ cmake automake libXext-devel atk-devel cairo-devel gdk-pixbuf2-devel fontconfig-devel openal-soft-devel SDL_image-devel SDL_ttf-devel freetype-devel libX11-devel libICE-devel libSM-devel mesa-libGL mesa-libGL-devel glib2-devel mesa-lib GLU-devel pango-devel ncurses-devel libsndfile-devel gtk2-devel glew-devel SDL-devel glibc-devel zlib```
+```yum install gcc gcc-c++ cmake automake libXext-devel atk-devel cairo-devel gdk-pixbuf2-devel fontconfig-devel openal-soft-devel SDL_image-devel SDL_ttf-devel freetype-devel libX11-devel libICE-devel libSM-devel mesa-libGL mesa-libGL-devel glib2-devel mesa-lib GLU-devel pango-devel ncurses-devel libsndfile-devel gtk3-devel glew-devel SDL-devel glibc-devel zlib```
 
 ## Building Library
 
@@ -28,8 +28,8 @@ To build the library:
 
 ```
 mkdir build && cd build
-cmake ..
-make -j4
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+make
 ```
 
 If the build completed successfully the library file is in `build/libgraphics.so`
