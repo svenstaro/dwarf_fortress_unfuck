@@ -17,6 +17,7 @@ find_package(Freetype REQUIRED)
 find_package(Threads REQUIRED)
 find_package(X11 REQUIRED)
 find_package(ZLIB REQUIRED)
+find_package(harfbuzz REQUIRED)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)
@@ -70,4 +71,5 @@ target_link_libraries(graphics
     ${X11_LIBRARIES}
     ${CURSES_LIBRARIES}
     ${ZLIB_LIBRARIES}
+    harfbuzz::harfbuzz
 )
