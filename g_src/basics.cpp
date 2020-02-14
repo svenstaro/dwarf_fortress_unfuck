@@ -44,8 +44,36 @@ typedef int32_t Ordinal;
 #include "init.h"
 #include "basics.h"
 
+//#define FAST_ERRORLOG
+
 extern string errorlog_prefix;
 
+#ifdef FAST_ERRORLOG
+std::ofstream error_feed;
+bool error_opened=false;
+
+void errorlog_string(const string &str)
+{
+	if(str.empty())return;
+
+	//SAVE AN ERROR TO THE LOG FILE
+	if(!error_opened)
+		{
+		error_feed.open("errorlog.txt", std::ios::out | std::ios::app);
+		error_opened=true;
+		}
+	if(error_feed.is_open())
+		{
+		if(!errorlog_prefix.empty())
+			{
+			error_feed<<errorlog_prefix.c_str()<<std::endl;
+			errorlog_prefix.clear();
+			}
+		error_feed<<str.c_str()<<std::endl;
+		}
+	//fseed.close();
+}
+#else
 void errorlog_string(const string &str)
 {
 	if(str.empty())return;
@@ -63,6 +91,7 @@ void errorlog_string(const string &str)
 		}
 	fseed.close();
 }
+#endif
 
 void gamelog_string(const string &str)
 {
