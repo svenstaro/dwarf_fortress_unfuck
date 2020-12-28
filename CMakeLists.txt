@@ -16,7 +16,7 @@ find_package(Freetype REQUIRED)
 find_package(Threads REQUIRED)
 find_package(X11 REQUIRED)
 find_package(ZLIB REQUIRED)
-pkg_search_module(GTK REQUIRED gtk+-3.0 gtk+-2.0)
+pkg_search_module(GTK REQUIRED gtk+-3.0)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)
