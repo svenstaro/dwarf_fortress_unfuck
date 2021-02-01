@@ -1,3 +1,5 @@
+#include <unistd.h>
+
 static bool curses_initialized = false;
 
 static void endwin_void() {

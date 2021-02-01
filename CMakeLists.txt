@@ -14,10 +14,14 @@ find_package(Freetype REQUIRED)
 find_package(Threads REQUIRED)
 find_package(X11 REQUIRED)
 find_package(ZLIB REQUIRED)
-pkg_search_module(GTK REQUIRED gtk+-3.0)
+pkg_search_module(GTK gtk+-3.0)
 
-set(CURSES_NEED_NCURSES TRUE)
-find_package(Curses REQUIRED)
+set(CURSES_NEED_NCURSES FALSE)
+find_package(Curses)
+
+if(GTK_FOUND)
+   target_compile_definitions(graphics PRIVATE HAVE_GTK)
+endif()
 
 # special case for X11 libs that the FindX11 module doesn't require by default
 if(NOT X11_ICE_FOUND)
