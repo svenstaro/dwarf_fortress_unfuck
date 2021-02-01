@@ -590,6 +590,10 @@ int enablerst::loop(string cmdline) {
 
   // Clean up graphical resources
   delete renderer;
+
+  // FIX infinite loop
+  // https://www.bay12games.com/dwarves/mantisbt/view.php?id=11564
+  return 0;
 }
 
 void enablerst::override_grid_size(int x, int y) {
