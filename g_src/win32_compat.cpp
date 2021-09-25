@@ -146,7 +146,7 @@ int MessageBox(HWND *dummy, const char *text, const char *caption, UINT type)
         break;
       }
     }
-  #endif /* HAVE_GTK */
+  #else
     if (isatty(fileno(stdin))) {
       dprintf(2, "Alert %s:\n%s\n", caption ? caption : "", text ? text : "");
       if (type & MB_YESNO) {
@@ -162,6 +162,7 @@ int MessageBox(HWND *dummy, const char *text, const char *caption, UINT type)
       /* just assume windowed if no TTY is available to ask */
       ret = IDNO;
     }
+  #endif /* HAVE_GTK */
   } else {
     // Use curses
     init_curses();
