@@ -16,7 +16,7 @@ dev packages installed.
 
 ### Arch Linux
 
-```pacman -S base-devel {sdl,sdl_image,sdl_ttf,openal,pango,atk,gtk3,ncurses,glew,zlib}```
+```pacman -S base-devel sdl sdl_image sdl_ttf openal pango atk gtk3 ncurses glew zlib ninja```
 
 ### Fedora
 
@@ -31,10 +31,8 @@ dev packages installed.
 To build the library:
 
 ```
-mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-make
+cmake -Bbuild -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo
+ninja -Cbuild
 ```
 
 If the build completed successfully the library file is in `build/libgraphics.so`
-
