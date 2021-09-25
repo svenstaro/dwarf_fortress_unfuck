@@ -23,21 +23,23 @@ You may ignore any GTK dependency if you do not want to build with support.
 
 ### Arch Linux
 
-```pacman -S base-devel {sdl,sdl_image,sdl_ttf,openal,pango,atk,gtk3,ncurses,glew,zlib}```
+```pacman -S base-devel sdl sdl_image sdl_ttf openal pango atk gtk3 ncurses glew zlib ninja```
 
-### Fedora 20
+### Fedora
 
 ```yum install gcc gcc-c++ cmake automake libXext-devel atk-devel cairo-devel gdk-pixbuf2-devel fontconfig-devel openal-soft-devel SDL_image-devel SDL_ttf-devel freetype-devel libX11-devel libICE-devel libSM-devel mesa-libGL mesa-libGL-devel glib2-devel mesa-lib GLU-devel pango-devel ncurses-devel libsndfile-devel gtk3-devel glew-devel SDL-devel glibc-devel zlib```
+
+### Debian/Ubuntu
+
+```apt install -y cmake ninja-build libgl1-mesa-dev libsdl1.2-dev libsdl-image1.2-dev libsdl-ttf2.0-dev libglew-dev libopenal-dev libgtk-3-dev libsndfile1-dev```
 
 ## Building Library
 
 To build the library:
 
 ```
-mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-make
+cmake -Bbuild -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo
+ninja -Cbuild
 ```
 
 If the build completed successfully the library file is in `build/libgraphics.so`
-
