@@ -16,12 +16,8 @@ find_package(X11 REQUIRED)
 find_package(ZLIB REQUIRED)
 pkg_search_module(GTK gtk+-3.0)
 
-set(CURSES_NEED_NCURSES FALSE)
+set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses)
-
-if(GTK_FOUND)
-   target_compile_definitions(graphics PRIVATE HAVE_GTK)
-endif()
 
 # special case for X11 libs that the FindX11 module doesn't require by default
 if(NOT X11_ICE_FOUND)
@@ -74,3 +70,8 @@ target_link_libraries(graphics
     ${ZLIB_LIBRARIES}
     ${GTK_LIBRARIES}
 )
+
+if(GTK_FOUND)
+   target_compile_definitions(graphics PRIVATE HAVE_GTK)
+endif()
+
