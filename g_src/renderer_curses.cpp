@@ -1,4 +1,6 @@
+#if defined(__APPLE__) || defined(unix)
 #include <unistd.h>
+#endif
 
 static bool curses_initialized = false;
 
