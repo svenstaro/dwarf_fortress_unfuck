@@ -1,7 +1,9 @@
 #ifdef __APPLE__
 # include "osx_messagebox.h"
 #elif defined(unix)
-# include <gtk/gtk.h>
+# ifdef HAVE_GTK
+#  include <gtk/gtk.h>
+# endif
 #endif
 
 #include <cassert>
@@ -590,6 +592,10 @@ int enablerst::loop(string cmdline) {
 
   // Clean up graphical resources
   delete renderer;
+
+  // FIX infinite loop
+  // https://www.bay12games.com/dwarves/mantisbt/view.php?id=11564
+  return 0;
 }
 
 void enablerst::override_grid_size(int x, int y) {
@@ -713,7 +719,7 @@ int main (int argc, char* argv[]) {
 #ifdef unix
   setlocale(LC_ALL, "");
 #endif
-#if !defined(__APPLE__) && defined(unix)
+#if !defined(__APPLE__) && defined(unix) && defined(HAVE_GTK)
   bool gtk_ok = false;
   if (getenv("DISPLAY"))
     gtk_ok = gtk_init_check(&argc, &argv);
@@ -734,6 +740,7 @@ int main (int argc, char* argv[]) {
   init.begin(); // Load init.txt settings
   
 #if !defined(__APPLE__) && defined(unix)
+ #if defined(HAVE_GTK)
   if (!gtk_ok && !init.display.flag.has_flag(INIT_DISPLAY_FLAG_TEXT)) {
     puts("Display not found and PRINT_MODE not set to TEXT, aborting.");
     exit(EXIT_FAILURE);
@@ -743,6 +750,7 @@ int main (int argc, char* argv[]) {
     puts("Graphical tiles are not compatible with text output, sorry");
     exit(EXIT_FAILURE);
   }
+ #endif
 #endif
 
   // Initialize video, if we /use/ video

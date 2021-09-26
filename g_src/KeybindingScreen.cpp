@@ -1,7 +1,9 @@
 #ifdef __APPLE__
 # include "osx_messagebox.h"
 #elif defined(unix)
-# include <gtk/gtk.h>
+# ifdef HAVE_GTK
+#  include <gtk/gtk.h>
+# endif
 #endif
 
 #include "GL/glew.h"

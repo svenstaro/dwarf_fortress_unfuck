@@ -13,7 +13,11 @@
 # ifdef __APPLE__
 #  include "osx_messagebox.h"
 # elif defined(unix)
-#  include <gtk/gtk.h>
+#  ifdef HAVE_GTK
+#    include <gtk/gtk.h>
+#  else
+#    include <unistd.h>
+#  endif
 # endif
 #endif
 
@@ -112,6 +116,7 @@ int MessageBox(HWND *dummy, const char *text, const char *caption, UINT type)
   }
 # else // GTK code
   if (getenv("DISPLAY")) {
+  #ifdef HAVE_GTK
     // Have X, will dialog
     GtkWidget *dialog = gtk_message_dialog_new(NULL,
                                                GTK_DIALOG_DESTROY_WITH_PARENT,
@@ -141,13 +146,30 @@ int MessageBox(HWND *dummy, const char *text, const char *caption, UINT type)
         break;
       }
     }
+  #else
+    if (isatty(fileno(stdin))) {
+      dprintf(2, "Alert %s:\n%s\n", caption ? caption : "", text ? text : "");
+      if (type & MB_YESNO) {
+        while(ret == IDOK) {
+          dprintf(2, "please answer with 'yes' or 'no'\n");
+          char buf[16];
+          fgets(buf, sizeof buf, stdin);
+          if(!strncmp(buf, "yes", 3)) ret = IDYES;
+          else if(!strncmp(buf, "no", 2)) ret = IDNO;
+        }
+      }
+    } else {
+      /* just assume windowed if no TTY is available to ask */
+      ret = IDNO;
+    }
+  #endif /* HAVE_GTK */
   } else {
     // Use curses
     init_curses();
     erase();
     gps.force_full_display_count = 1;
     wattrset(*stdscr_p, A_NORMAL | COLOR_PAIR(1));
-    
+
     mvwaddstr(*stdscr_p, 0, 5, caption);
     mvwaddstr(*stdscr_p, 2, 2, text);
     nodelay(*stdscr_p, false);
@@ -173,7 +195,7 @@ int MessageBox(HWND *dummy, const char *text, const char *caption, UINT type)
     }
     nodelay(*stdscr_p, -1);
   }
-# endif
+  #endif
   
   if (toggle_screen) {
     enabler.toggle_fullscreen();

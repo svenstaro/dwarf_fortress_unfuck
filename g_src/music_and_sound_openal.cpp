@@ -250,7 +250,9 @@ void musicsoundst::deinitsound() {
     alDeleteBuffers(1, &buffer);
   }
   // Deinit OpenAL
-  alcMakeContextCurrent(NULL);
+  // FIX infinite loop
+  // https://www.bay12games.com/dwarves/mantisbt/view.php?id=11564
+  //alcMakeContextCurrent(NULL);
   alcDestroyContext(context);
   alcCloseDevice(device);
 
@@ -480,7 +482,10 @@ static bool init_openal() {
 
 void alEnable( ALenum capability ) { _alEnable(capability); }
 void alDisable( ALenum capability ) { _alDisable(capability); }
-ALboolean alIsEnabled( ALenum capability ) { _alIsEnabled(capability); }
+//ALboolean alIsEnabled( ALenum capability ) { _alIsEnabled(capability); }
+// FIX return statement
+// https://www.bay12games.com/dwarves/mantisbt/view.php?id=11564
+ALboolean alIsEnabled( ALenum capability ) { return _alIsEnabled(capability); }
 const ALchar* alGetString( ALenum param ) { return _alGetString(param); }
 void alGetBooleanv( ALenum param, ALboolean* data ) { _alGetBooleanv(param, data); }
 void alGetIntegerv( ALenum param, ALint* data ) { _alGetIntegerv(param, data); }
@@ -490,7 +495,10 @@ ALboolean alGetBoolean( ALenum param ) { return _alGetBoolean(param); }
 ALint alGetInteger( ALenum param ) { return _alGetInteger(param); }
 ALfloat alGetFloat( ALenum param ) { return _alGetFloat(param); }
 ALdouble alGetDouble( ALenum param ) { return _alGetDouble(param); }
-ALenum alGetError( void ) { _alGetError(); }
+//ALenum alGetError( void ) { _alGetError(); }
+// FIX return statement
+// https://www.bay12games.com/dwarves/mantisbt/view.php?id=11564
+ALenum alGetError( void ) { return _alGetError(); }
 ALboolean alIsExtensionPresent( const ALchar* extname ) { return _alIsExtensionPresent(extname); }
 void* alGetProcAddress( const ALchar* fname ) { return _alGetProcAddress(fname); }
 ALenum alGetEnumValue( const ALchar* ename ) { return _alGetEnumValue(ename); }
