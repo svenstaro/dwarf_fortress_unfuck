@@ -63,7 +63,7 @@ target_link_libraries(graphics
     ${SDL_IMAGE_LIBRARIES}
     ${OPENAL_LIBRARY}
     ${GTK2_LIBRARIES}
-    ${GLEW_LIBRARIES}
+    GLEW::glew
     ${FREETYPE_LIBRARIES}
     ${X11_LIBRARIES}
     ${CURSES_LIBRARIES}
