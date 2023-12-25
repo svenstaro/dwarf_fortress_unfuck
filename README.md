@@ -14,6 +14,8 @@ run without it. Note that if `[WINDOWED=PROMPT]` in `data/init/init.txt` then
 the game must be run from the terminal so that the user may make their choice
 with an input prompt.
 
+**NOTE: As of v50, this repo shouldn't be required anymore.**
+
 ## Build Dependencies
 
 To build the graphics library you must have the required libraries and
