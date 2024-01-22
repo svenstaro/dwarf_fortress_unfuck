@@ -1,6 +1,8 @@
 Unfucking Dwarf Fortress
 ========================
 
+**⚠️: As of v50, this repo shouldn't be required anymore.**
+
 As we know, Dwarf Fortress is, most sadly, closed source. However, the multimedia
 layer for font rendering, audio output and graphics is open source. The problem
 is that the source is somewhat fucked with no clear way to build it and no official
@@ -13,8 +15,6 @@ Additionally, GTK has been removed as a hard dependancy and Dwarf Fortress will
 run without it. Note that if `[WINDOWED=PROMPT]` in `data/init/init.txt` then
 the game must be run from the terminal so that the user may make their choice
 with an input prompt.
-
-**NOTE: As of v50, this repo shouldn't be required anymore.**
 
 ## Build Dependencies
 
